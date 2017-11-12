@@ -798,6 +798,10 @@ form label {
   color: #828282;
 }
 
+#contact-href:hover {
+  cursor: pointer;
+}
+
 .gtco-testimonial {
   background: #efefef;
 }
