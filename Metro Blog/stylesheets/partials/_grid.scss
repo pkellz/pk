@@ -1,0 +1,93 @@
+.main-container
+{
+  width:60%;
+  float:right;
+  height:100%;
+  position: relative;
+  .icon-holder
+  {
+    height:100px;
+    width:100%;
+    background:red;
+    display:inline;
+    img
+    {
+      height:100%;
+      width:100%;
+    }
+  }
+  .main-container-title-bar
+  {
+    height:100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1
+    {
+      font-size: 120px;
+      font-family: $sec-font;
+      font-weight: bold;
+      margin-top:-60px;
+      color:#444;
+      &:hover
+      {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.container
+{
+  width:82% !important;
+  padding:0 !important;
+  img
+  {
+    height:100%;
+    width:100%;
+    @include transition(0.3s);
+  }
+  .col-md-3,.col-md-4,.col-md-8, .col-md-12
+  {
+    margin-top:15px;
+    height:360px;
+    padding:0px !important;
+    overflow: hidden;
+    &:hover
+    {
+      cursor: pointer;
+      img
+      {
+        @include transform-scale(1.1);
+      }
+    }
+    .overlay
+    {
+      position: relative;
+      top:-100%;
+      z-index: 4;
+      height:360px;
+      width:100%;
+      background:#111;
+      opacity: 0.31;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      h1
+      {
+        color:white;
+        font-size:50px;
+      }
+      small
+      {
+        color:white;
+        font-size: 18px;
+      }
+    }
+  }
+  .col
+  {
+    border-right:15px solid white;
+  }
+}

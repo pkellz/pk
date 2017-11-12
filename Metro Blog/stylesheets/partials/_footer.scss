@@ -1,0 +1,36 @@
+.footer
+{
+  padding:0 !important;
+  background:#111;
+  overflow-x: hidden;
+  float:right;
+  .col-md-4
+  {
+    padding:60px 130px !important;
+    &:hover
+    {
+      cursor:auto;
+    }
+    ul
+    {
+      padding:10px;
+      list-style:none;
+    }
+    ul li:first-child
+    {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    li
+    {
+      padding:5px;
+    }
+    a
+    {
+      color:white;
+      font-family:$main-font;
+      font-size:20px;
+      text-decoration: none;
+    }
+  }
+}

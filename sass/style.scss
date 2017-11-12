@@ -630,7 +630,7 @@ form {
 
 #gtco-features,
 #gtco-features-2,
-#gtco-testimonial,
+.gtco-testimonial,
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
@@ -752,7 +752,7 @@ form {
 	}
 }
 
-#gtco-testimonial {
+.gtco-testimonial {
 	background: #efefef;
 	.testimony-slide{
 		// display: none;
@@ -771,7 +771,13 @@ form {
 
 			img {
 				width: 90px;
+				border:3px solid #777;
+				transition: all 500ms ease;
 				@include border-radius(50%);
+				&:hover
+				{
+					box-shadow: 0px 0px 15px #F85A16;
+				}
 			}
 		}
 

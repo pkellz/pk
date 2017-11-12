@@ -1,0 +1,141 @@
+.sidebar
+{
+  overflow:hidden;
+  margin-left:-1px;
+  height:100%;
+  width:320px;
+  float:left;
+  position: fixed;
+  box-shadow: 0px 0px 33px #000;
+  background:
+  {
+    image:url("/Metro Blog/images/sidebar.jpg");
+    color:grey;
+  }
+  .sidebar-nav
+  {
+    height:15%;
+    width:100%;
+    .sidebar-menu, .sidebar-search
+    {
+      height:100%;
+      width:49%;
+      display: inline-block;
+      padding:45px;
+      text-align: center;
+      img
+      {
+        height:25px;
+        width:25px;
+        &:hover
+        {
+          cursor:pointer;
+          @include transition(570ms);
+          opacity:0.5;
+        }
+      }
+    }
+    .x-icon
+    {
+      display:none;
+    }
+    .sidebar-search
+    {
+      float:right;
+    }
+  }
+  .sidebar-menu-expanded
+  {
+    width:320px;
+    margin-left: -320px;
+    float:left;
+    ul
+    {
+      padding:35px;
+      li
+      {
+        padding-top:30px;
+        list-style: none;
+        &:hover
+        {
+          cursor: pointer;
+          a
+          {
+            color:#999;
+          }
+        }
+      }
+      a
+      {
+        color:white;
+        font-family: $sec-font;
+        font-size: 34px;
+        text-decoration: none;
+      }
+    }
+  }
+  .sidebar-profile
+  {
+    height:85%;
+    width: 100%;
+    position: absolute;
+    h2,h5
+    {
+      color:white;
+      text-align: center;
+      text-shadow: 7px 7px 10px #000;
+      font-family: $main-font;
+    }
+    h5
+    {
+      line-height: 30px;
+      width:73%;
+      margin:auto;
+    }
+    hr
+    {
+      width:90%;
+      border:none;
+      height:1px;
+      background:#666;
+    }
+    .sidebar-img
+    {
+      height:250px;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      img
+      {
+        box-shadow: 4px 4px 9px #111;
+        border-radius:100%;
+        height:95%;
+        width:76%;
+        border:2px solid white;
+      }
+    }
+    .sidebar-text
+    {
+      width:100%;
+    }
+    .sidebar-social-media
+    {
+      padding:30px;
+      width:100%;
+      bottom:0px;
+      position:absolute;
+      text-align:center;
+      img
+      {
+        height:40px;
+        width:40px;
+        padding:5px;
+        &:hover
+        {
+          cursor:pointer;
+        }
+      }
+    }
+  }
+}

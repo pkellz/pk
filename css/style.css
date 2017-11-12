@@ -644,7 +644,7 @@ form label {
 
 #gtco-features,
 #gtco-features-2,
-#gtco-testimonial,
+.gtco-testimonial,
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
@@ -656,7 +656,7 @@ form label {
 @media screen and (max-width: 768px) {
   #gtco-features,
   #gtco-features-2,
-  #gtco-testimonial,
+  .gtco-testimonial,
   #gtco-services,
   #gtco-subscribe,
   #gtco-footer,
@@ -798,15 +798,15 @@ form label {
   color: #828282;
 }
 
-#gtco-testimonial {
+.gtco-testimonial {
   background: #efefef;
 }
 
-#gtco-testimonial .testimony-slide {
+.gtco-testimonial .testimony-slide {
   text-align: center;
 }
 
-#gtco-testimonial .testimony-slide span {
+.gtco-testimonial .testimony-slide span {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -814,7 +814,7 @@ form label {
   display: block;
 }
 
-#gtco-testimonial .testimony-slide figure {
+.gtco-testimonial .testimony-slide figure {
   margin-bottom: 10px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -822,15 +822,21 @@ form label {
   *display: inline;
 }
 
-#gtco-testimonial .testimony-slide figure img {
+.gtco-testimonial .testimony-slide figure img {
   width: 90px;
+  border: 3px solid #777;
+  transition: all 500ms ease;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
 
-#gtco-testimonial .testimony-slide blockquote {
+.gtco-testimonial .testimony-slide figure img:hover {
+  box-shadow: 0px 0px 15px #F85A16;
+}
+
+.gtco-testimonial .testimony-slide blockquote {
   border: none;
   margin: 30px auto;
   width: 50%;
@@ -839,24 +845,24 @@ form label {
 }
 
 @media screen and (max-width: 992px) {
-  #gtco-testimonial .testimony-slide blockquote {
+  .gtco-testimonial .testimony-slide blockquote {
     width: 100%;
   }
 }
 
-#gtco-testimonial .arrow-thumb {
+.gtco-testimonial .arrow-thumb {
   position: absolute;
   top: 40%;
   display: block;
   width: 100%;
 }
 
-#gtco-testimonial .arrow-thumb a {
+.gtco-testimonial .arrow-thumb a {
   font-size: 32px;
   color: #dadada;
 }
 
-#gtco-testimonial .arrow-thumb a:hover, #gtco-testimonial .arrow-thumb a:focus, #gtco-testimonial .arrow-thumb a:active {
+.gtco-testimonial .arrow-thumb a:hover, .gtco-testimonial .arrow-thumb a:focus, .gtco-testimonial .arrow-thumb a:active {
   text-decoration: none;
 }
 
