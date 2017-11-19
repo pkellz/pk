@@ -47,7 +47,7 @@
 	 $routeProvider
 		.when("/view1",{
 			controller:"MainController",
-			templateUrl:"/AngularJS Blog/scripts/views/home.html"
+			templateUrl:"/pk/AngularJS Blog/scripts/views/home.html"
 
 		})
 		.when("/post/:id",{
