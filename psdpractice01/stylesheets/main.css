@@ -18,7 +18,7 @@ img:hover {
 .billboard {
   padding: 13%;
   width: 100%;
-  background: url("images/main-board.png") no-repeat 0px 75%;
+  background: url("/psdpractice01/images/main-board.png") no-repeat 0px 75%;
 }
 
 .billboard .text-wrapper {
@@ -40,7 +40,7 @@ img:hover {
 }
 
 .ipad {
-  background: url("images/ipad-bg.png") no-repeat center center;
+  background: url("/psdpractice01/images/ipad-bg.png") no-repeat center center;
   overflow: hidden;
 }
 
@@ -82,7 +82,7 @@ img:hover {
 .ipad .right-container {
   height: 0px;
   float: right;
-  background: url("images/ipad.png") no-repeat;
+  background: url("/psdpractice01/images/ipad.png") no-repeat;
   width: 45%;
   overflow-y: hidden;
   padding-top: 120px;
@@ -132,7 +132,7 @@ img:hover {
   height: 630px;
   width: 100%;
   padding: 1px;
-  background: url("images/gray-board.png") no-repeat center 0px;
+  background: url("/psdpractice01/images/gray-board.png") no-repeat center 0px;
   text-align: center;
 }
 
