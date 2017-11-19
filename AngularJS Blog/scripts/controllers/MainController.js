@@ -48,6 +48,7 @@
 		.when("/view1",{
 			controller:"MainController",
 			templateUrl:"/AngularJS Blog/scripts/views/home.html"
+
 		})
 		.when("/post/:id",{
 			controller:"MainController",

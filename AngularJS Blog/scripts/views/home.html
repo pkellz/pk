@@ -1,19 +1,210 @@
-<div class="heading-container">
-	<img src="images/ang.png">
-	<h1>Posts</h1>
+<header>
+<div class="wrapper cf">
+  <!-- nav -->
+  <ul id="nav" class="sf-menu" style="width:50%;">
+    <li class="current-menu-item" ><a href="/AngularJS Blog/#!/view1"><h3>HOME</h3></a></li>
+  </ul>
+  <div id="combo-holder"></div>
+  <!-- ends nav -->
+  <!-- SLIDER -->
+  <!--<div id="home-slider" class="lof-slidecontent">
+    <div class="preload">
+      <div></div>
+    </div>
+    <!-- slider content -->
+  <!--  <div class="main-slider-content" >
+      <ul class="sliders-wrap-inner">
+        <li> <img src="img/dummies/slides/01.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/02.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/03.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/04.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/05.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/06.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+        <li> <img src="img/dummies/slides/07.jpg" alt="">
+          <div class="slider-description">
+            <h4>Lorem ipsum dolor</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est... <a class="link" href="#">Read more </a> </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- ENDS slider content -->
+    <!-- slider nav -->
+    <!--<div class="navigator-content">
+      <div class="navigator-wrapper">
+        <ul class="navigator-wrap-inner">
+          <li><img src="img/dummies/slides/01_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/02_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/03_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/04_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/05_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/06_thumb.jpg" alt=""></li>
+          <li><img src="img/dummies/slides/07_thumb.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div class="button-next">Next</div>
+      <div  class="button-previous">Previous</div>
+      <!-- REMOVED TILL FIXED <div class="button-control"><span>STOP</span></div> -->
+    <!--</div>
+    <!-- slider nav -->
+  <!--</div>
+  <!-- ENDS SLIDER -->
 </div>
-<br>
-<div class="container">
-	<div class="row">
-		<post ng-repeat="post in posts" info="posts[$index]" index="$index"></post>
-	</div>
+</header>
+<!-- ENDS HEADER -->
+<!-- MAIN -->
+<div id="main">
+<div class="wrapper cf">
+  <!-- featured -->
+  <div class="home-featured">
+    <!-- Filter container -->
+    <div id="filter-container" class="cf">
+      <figure class="web"> <a href="project.html" class="thumb"><img src="img/dummies/featured/01.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque </h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="print"> <a href="project.html" class="thumb"><img src="img/dummies/featured/02.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="design"> <a href="project.html" class="thumb"><img src="img/dummies/featured/03.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="photo"> <a href="project.html" class="thumb"><img src="img/dummies/featured/04.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="web photo"> <a href="project.html" class="thumb"><img src="img/dummies/featured/05.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="web print"> <a href="project.html" class="thumb"><img src="img/dummies/featured/06.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="photo"> <a href="project.html" class="thumb"><img src="img/dummies/featured/04.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="web photo"> <a href="project.html" class="thumb"><img src="img/dummies/featured/05.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+      <figure class="web print"> <a href="project.html" class="thumb"><img src="img/dummies/featured/01.jpg" alt=""></a>
+        <figcaption> <a href="project.html">
+          <h3 class="heading">Pellentesque habitant morbi</h3>
+          </a> Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. </figcaption>
+      </figure>
+    </div>
+    <!-- ENDS Filter container -->
+  </div>
+  <!-- ENDS featured -->
 </div>
-		<br>
-		<br>
-<div class="suggestion-box reg-sug">
-	<h3><em>Add A New Post</em></h3>
-	<input type="text" class="suggest"  ng-model="newPost">
-	<br>
-	<br>
-	<div class="btn btn-danger btn-lg" role="btn" ng-click="addPost()">Submit</div>
+<!-- ENDS WRAPPER -->
 </div>
+<!-- ENDS MAIN -->
+<!-- FOOTER -->
+<footer>
+<div class="wrapper cf">
+  <!-- widgets -->
+  <ul  class="widget-cols cf">
+    <li class="first-col">
+      <div class="widget-block">
+        <h4>RECENT POSTS</h4>
+        <div class="recent-post cf"> <a href="#" class="thumb"><img src="img/dummies/54x54.gif" alt=""></a>
+          <div class="post-head"> <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span> </div>
+        </div>
+        <div class="recent-post cf"> <a href="#" class="thumb"><img src="img/dummies/54x54.gif" alt=""></a>
+          <div class="post-head"> <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span> </div>
+        </div>
+        <div class="recent-post cf"> <a href="#" class="thumb"><img src="img/dummies/54x54.gif" alt=""></a>
+          <div class="post-head"> <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span> </div>
+        </div>
+      </div>
+    </li>
+    <li class="second-col">
+      <div class="widget-block">
+        <h4>ABOUT</h4>
+        <p>Folder it's completely free this means you don't have to pay anything read license.</p>
+        <p>Visit us to find the most beautiful free templates up to date.</p>
+      </div>
+    </li>
+    <li class="third-col">
+      <div class="widget-block">
+        <div id="tweets" class="footer-col tweet">
+          <h4>TWITTER WIDGET</h4>
+          <ul class="tweet_list">
+            <li class="tweet_first tweet_odd"><span class="tweet_time"><a href="#">about 2 days ago</a></span> <span class="tweet_text">Free Simple HTML template - Shinra HTML template | Luis Zuno| Free web resources <a href="#">domain.com</a></span></li>
+            <li class="tweet_even"><span class="tweet_time"><a href="#">about 3 days ago</a></span> <span class="tweet_text">Step by Step Guide for WordPress Beginners <a href="#">domain.com</a></span></li>
+            <li class="tweet_odd"><span class="tweet_time"><a href="#">about 3 days ago</a></span> <span class="tweet_text">Just downloaded Kroft PSD for free from <a href="#">domain.com</a> Check it out!</span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="fourth-col">
+      <div class="widget-block">
+        <h4>CATEGORIES</h4>
+        <ul>
+          <li class="cat-item"><a href="#">Design</a></li>
+          <li class="cat-item"><a href="#">Photo</a></li>
+          <li class="cat-item"><a href="#">Art</a></li>
+          <li class="cat-item"><a href="#">Game</a></li>
+          <li class="cat-item"><a href="#">Film</a></li>
+          <li class="cat-item"><a href="#">TV</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <!-- ENDS widgets -->
+  <!-- bottom -->
+  <div class="footer-bottom">
+    <div class="left">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></div>
+    <ul id="social-bar" class="cf sb">
+      <li><a href="#" class="facebook" title="Facebook">Facebook</a></li>
+      <li><a href="#" class="twitter" title="Twitter"></a></li>
+      <li><a href="#" class="plus" title="Plus One"></a></li>
+    </ul>
+  </div>
+  <!-- ENDS bottom -->
+</div>
+</footer>
+<!-- ENDS FOOTER -->

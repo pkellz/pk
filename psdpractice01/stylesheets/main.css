@@ -1,222 +1,328 @@
 p, h1, h2, h3, h4, h5 {
   font-family: 'Lato' , Arial, Helvetica, sans-serif;
   font-weight: 300;
-  color: white; }
+  color: white;
+}
 
 body {
   padding: 0;
   margin: 0;
   height: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 img:hover {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .billboard {
-  padding-top: 100px;
-  height: 820px;
+  padding: 13%;
   width: 100%;
-  background: url("/psdpractice01/images/main-board.png") no-repeat; }
-  .billboard .text-wrapper {
-    padding: 20px;
-    width: 400px;
-    text-align: center;
-    margin: auto; }
-  .billboard h1 {
-    font-size: 70px; }
-  .billboard h4 {
-    color: #d0e7e9;
-    font-size: 16px;
-    line-height: 30px; }
+  background: url("/psdpractice01/images/main-board.png") no-repeat 0px 75%;
+}
+
+.billboard .text-wrapper {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.billboard h1 {
+  display: inline;
+  font-size: 70px;
+}
+
+.billboard h5 {
+  text-shadow: 0px 1px 5px #000;
+  margin-top: -5px;
+  color: #fff;
+  font-size: 20px;
+}
 
 .ipad {
   background: url("/psdpractice01/images/ipad-bg.png") no-repeat center center;
-  overflow: hidden; }
-  .ipad .left-text-wrapper {
-    float: left;
-    width: 50%;
-    padding: 0px 0px 0px 100px; }
-    .ipad .left-text-wrapper h1 {
-      font-size: 45px; }
-    .ipad .left-text-wrapper p {
-      line-height: 30px; }
-    .ipad .left-text-wrapper .download {
-      border-radius: 4px;
-      padding: 5px;
-      width: 300px;
-      border: 2px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      -webkit-transition: all 500ms ease;
-      -ms-transition: all 500ms ease;
-      -moz-transition: all 500ms ease;
-      transition: all 500ms ease; }
-      .ipad .left-text-wrapper .download:hover {
-        cursor: pointer;
-        box-shadow: 0px 0px 25px #eee; }
-  .ipad .right-container {
-    height: 0px;
-    float: right;
-    background: url("/psdpractice01/images/ipad.png") no-repeat;
-    width: 45%;
-    overflow-y: hidden;
-    padding-top: 120px; }
-    .ipad .right-container img.pop {
-      opacity: 1; }
-    .ipad .right-container #six {
-      transition: opacity 1000ms ease 0s; }
-    .ipad .right-container #five {
-      transition: opacity 1000ms ease 1s; }
-    .ipad .right-container #four {
-      transition: opacity 1000ms ease 2s; }
-    .ipad .right-container #three {
-      transition: opacity 1000ms ease 3s; }
-    .ipad .right-container #two {
-      transition: opacity 1000ms ease 4s; }
-    .ipad .right-container #one {
-      transition: opacity 1000ms ease 5s; }
-    .ipad .right-container img:nth-child(even) {
-      margin-left: 300px; }
-    .ipad .right-container img {
-      margin-top: 20px;
-      margin-left: 200px;
-      display: block;
-      height: 70px;
-      opacity: 0; }
+  overflow: hidden;
+}
+
+.ipad .left-text-wrapper {
+  float: left;
+  width: 50%;
+  padding: 15px 0px 0px 100px;
+}
+
+.ipad .left-text-wrapper h1 {
+  font-size: 45px;
+}
+
+.ipad .left-text-wrapper p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.ipad .left-text-wrapper .download {
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.ipad .left-text-wrapper .download:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 25px #eee;
+}
+
+.ipad .right-container {
+  height: 0px;
+  float: right;
+  background: url("/psdpractice01/images/ipad.png") no-repeat;
+  width: 45%;
+  overflow-y: hidden;
+  padding-top: 120px;
+}
+
+.ipad .right-container img.pop {
+  opacity: 1;
+}
+
+.ipad .right-container #six {
+  transition: opacity 1000ms ease 0s;
+}
+
+.ipad .right-container #five {
+  transition: opacity 1000ms ease 1s;
+}
+
+.ipad .right-container #four {
+  transition: opacity 1000ms ease 2s;
+}
+
+.ipad .right-container #three {
+  transition: opacity 1000ms ease 3s;
+}
+
+.ipad .right-container #two {
+  transition: opacity 1000ms ease 4s;
+}
+
+.ipad .right-container #one {
+  transition: opacity 1000ms ease 5s;
+}
+
+.ipad .right-container img:nth-child(even) {
+  margin-left: 300px;
+}
+
+.ipad .right-container img {
+  margin-top: 20px;
+  margin-left: 200px;
+  display: block;
+  height: 70px;
+  opacity: 0;
+}
 
 .gray-board {
   height: 630px;
   width: 100%;
   padding: 1px;
   background: url("/psdpractice01/images/gray-board.png") no-repeat center 0px;
-  text-align: center; }
-  .gray-board h1 {
-    font-size: 50px; }
-  .gray-board small {
-    color: #bbb;
-    font-weight: 400;
-    font-size: 20px; }
-  .gray-board .face-container {
-    height: 150px;
-    width: 150px;
-    margin: 60px auto;
-    border: 5px solid white;
-    border-radius: 100%; }
-    .gray-board .face-container img {
-      height: 100%;
-      width: 100%;
-      border-radius: 100%; }
+  text-align: center;
+}
+
+.gray-board h1 {
+  font-size: 50px;
+}
+
+.gray-board small {
+  color: #bbb;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.gray-board .face-container {
+  height: 150px;
+  width: 150px;
+  margin: 60px auto;
+  border: 5px solid white;
+  border-radius: 100%;
+}
+
+.gray-board .face-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
 
 .definitions {
   width: 100%;
-  padding: 60px; }
-  .definitions .col-md-6 {
-    padding: 40px 0px 0px 30px; }
-  .definitions .col-sm-12, .definitions .col-xs-12 {
-    padding: 10px !important;
-    text-align: center; }
-  .definitions h3, .definitions p {
-    color: #91a1a8;
-    font-weight: 400; }
-  .definitions h3 {
-    font-size: 20px; }
-  .definitions h4 {
-    font-size: 22px; }
-  .definitions p {
-    font-size: 16px;
-    line-height: 40px; }
-  .definitions .demo-btn {
-    border-radius: 4px;
-    width: 160px;
-    background: #f69679;
-    margin-top: 50px;
-    margin-left: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .definitions .demo-btn:hover {
-      cursor: pointer; }
+  padding: 60px;
+}
+
+.definitions .col-md-6 {
+  padding: 40px 0px 0px 30px;
+}
+
+.definitions .col-sm-12, .definitions .col-xs-12 {
+  padding: 10px !important;
+  text-align: center;
+}
+
+.definitions h3, .definitions p {
+  color: #91a1a8;
+  font-weight: 400;
+}
+
+.definitions h3 {
+  font-size: 20px;
+}
+
+.definitions h4 {
+  font-size: 22px;
+}
+
+.definitions p {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.definitions .demo-btn {
+  border-radius: 4px;
+  width: 160px;
+  background: #f69679;
+  margin-top: 50px;
+  margin-left: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.definitions .demo-btn:hover {
+  cursor: pointer;
+}
 
 .more-blocks {
   width: 100%;
   background: #f6f6f4;
-  padding: 100px; }
-  .more-blocks h1 {
-    color: #abbcc3;
-    font-size: 40px; }
-  .more-blocks .col-md-6 h3 {
-    font-size: 20px;
-    color: #abbcc3; }
-  .more-blocks .box {
-    width: 100%; }
-    .more-blocks .box .box-img {
-      height: 290px; }
-    .more-blocks .box img {
-      height: 100%;
-      width: 100%; }
-    .more-blocks .box .box-text {
-      padding: 10px;
-      margin-top: -20px;
-      height: 100px;
-      background: white;
-      box-shadow: 0px 3px 3px #ccc; }
-      .more-blocks .box .box-text p, .more-blocks .box .box-text h3 {
-        font-weight: bold;
-        color: #9197a8; }
+  padding: 100px;
+}
+
+.more-blocks h1 {
+  color: #abbcc3;
+  font-size: 40px;
+}
+
+.more-blocks .col-md-6 h3 {
+  font-size: 20px;
+  color: #abbcc3;
+}
+
+.more-blocks .box {
+  width: 100%;
+}
+
+.more-blocks .box .box-img {
+  height: 290px;
+}
+
+.more-blocks .box img {
+  height: 100%;
+  width: 100%;
+}
+
+.more-blocks .box .box-text {
+  padding: 10px;
+  margin-top: -20px;
+  height: 100px;
+  background: white;
+  box-shadow: 0px 3px 3px #ccc;
+}
+
+.more-blocks .box .box-text p, .more-blocks .box .box-text h3 {
+  font-weight: bold;
+  color: #9197a8;
+}
 
 .footer {
   text-align: center;
   padding: 100px;
   width: 100%;
-  background: #83d7da; }
-  .footer p {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 30px;
-    color: white; }
-  .footer img {
-    display: block;
-    margin: 40px auto; }
-  .footer h3 {
-    font-size: 30px;
-    text-align: center; }
+  background: #83d7da;
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  color: white;
+}
+
+.footer img {
+  display: block;
+  margin: 40px auto;
+}
+
+.footer h3 {
+  font-size: 30px;
+  text-align: center;
+}
 
 @media screen and (max-width: 1120px) {
   .right-container {
-    display: none; }
+    display: none;
+  }
   .left-text-wrapper {
     text-align: center;
     width: 100% !important;
-    padding: 30px !important; }
-    .left-text-wrapper .download {
-      height: 60px;
-      width: 190px !important;
-      margin: auto; }
+    padding: 30px !important;
+  }
+  .left-text-wrapper .download {
+    height: 60px;
+    width: 190px !important;
+    margin: auto;
+  }
   .gray-board h1 {
-    font-size: 40px; } }
+    font-size: 40px;
+  }
+}
 
 @media screen and (max-width: 880px) {
   .gray-board h1 {
-    font-size: 32px; } }
+    font-size: 32px;
+  }
+}
 
 @media screen and (max-width: 580px) {
   .more-blocks {
-    padding: 0 !important; }
+    padding: 0 !important;
+  }
   .left-text-wrapper h1 {
     font-weight: bold;
-    font-size: 30px !important; }
+    font-size: 30px !important;
+  }
   .footer h3 {
-    font-size: 20px; }
+    font-size: 20px;
+  }
   .demo-btn {
-    margin-left: 29% !important; } }
+    margin-left: 29% !important;
+  }
+}
 
 @media screen and (max-width: 440px) {
   .gray-board h1 {
-    font-size: 24px; }
+    font-size: 24px;
+  }
   .footer h3 {
     width: 80%;
-    font-size: 16px; }
+    font-size: 16px;
+  }
   .billboard h4, .billboard h1 {
-    width: 90%; } }
+    width: 90%;
+  }
+}

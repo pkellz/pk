@@ -1,0 +1,17 @@
+ <div class="post ind">
+	<h2>{{posts[id].title}}</h2>
+	<h5>Upvotes: {{posts[id].likes}} | <a href="#!/view1">Back</a></h5>
+	<hr>
+	<h3>Comments</h3>
+	<div class="comments" ng-repeat="com in posts[id].comments">
+		<li style="color:red;">	<h5>{{com}}</h5></li>
+	</div>
+</div>
+<br>
+<div class="suggestion-box comment">
+	<h3><em>Add A Comment</em></h3>
+	<input type="text" class="suggest"  ng-model="newComment">
+	<br>
+	<br>
+	<div class="btn btn-info" role="btn" ng-click="addComment(id)">Submit</div>
+</div>

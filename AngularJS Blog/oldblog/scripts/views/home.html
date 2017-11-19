@@ -1,0 +1,19 @@
+<div class="heading-container">
+	<img src="images/ang.png">
+	<h1>Posts</h1>
+</div>
+<br>
+<div class="container">
+	<div class="row">
+		<post ng-repeat="post in posts" info="posts[$index]" index="$index"></post>
+	</div>
+</div>
+		<br>
+		<br>
+<div class="suggestion-box reg-sug">
+	<h3><em>Add A New Post</em></h3>
+	<input type="text" class="suggest"  ng-model="newPost">
+	<br>
+	<br>
+	<div class="btn btn-danger btn-lg" role="btn" ng-click="addPost()">Submit</div>
+</div>
