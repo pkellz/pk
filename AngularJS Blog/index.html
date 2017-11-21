@@ -1,82 +1,55 @@
 <!doctype html>
 <html class="no-js" ng-app="root">
-<head>
-<title>AngularJS Blog</title>
-<meta charset="utf-8">
-<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
-<link rel="stylesheet" media="all" href="css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- JS -->
+  <head>
+    <title>AngularJS Blog</title>
+    <meta charset="utf-8">
+    <!--Angular Stuff-->
+    <script src="scripts/angjs1.6.0.js"  ></script>
+    <script src="scripts/angjs-routes.js" ></script>
+    <script src="scripts/root.js"></script>
+    <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/lof-slider.css" media="all" >
+    <link rel="stylesheet" media="screen" href="css/superfish.css">
+    <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" media="screen">
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css" >
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css" >
+    <link rel="stylesheet" media="screen" href="css/carousel.css">
+    <link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" href="css/skin.css">
+    <link rel="stylesheet" media="all" href="css/lessframework.css">
+    <link rel="stylesheet" href="css/flexslider.css" >
+  </head>
+  <body class="home" ng-controller="MainController">
 
-<link rel="stylesheet" href="css/lof-slider.css" media="all" >
-<!-- ENDS slider -->
-<!-- Tweet -->
-<link rel="stylesheet" href="css/jquery.tweet.css" media="all">
-<!-- ENDS Tweet -->
-<!-- superfish -->
-<link rel="stylesheet" media="screen" href="css/superfish.css">
+    <div>
+      <div ng-view></div>
+    </div>
 
-<!-- ENDS superfish -->
-<!-- prettyPhoto -->
-
-<link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" media="screen">
-<!-- ENDS prettyPhoto -->
-<!-- poshytip -->
-<link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css" >
-<link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css" >
-
-<!-- ENDS poshytip -->
-<!-- JCarousel -->
-
-<link rel="stylesheet" media="screen" href="css/carousel.css">
-<!-- ENDS JCarousel -->
-<!-- GOOGLE FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
-<!-- modernizr -->
-
-<!-- SKIN -->
-<link rel="stylesheet" media="all" href="css/skin.css">
-<!-- Less framework -->
-<link rel="stylesheet" media="all" href="css/lessframework.css">
-<!-- flexslider -->
-<link rel="stylesheet" href="css/flexslider.css" >
-<!--Angular Stuff-->
-<script src="scripts/angjs1.6.0.js"  ></script>
-<script src="scripts/angjs-routes.js" ></script>
-<script src="scripts/root.js"></script>
-</head>
-<body class="home" ng-controller="MainController">
-<!-- HEADER -->
-<div>
-  <div ng-view></div>
-</div>
-
-
-<script src="js/jquery-1.7.1.min.js"  ></script>
-<script src="js/custom.js" ></script>
-<script src="js/tabs.js" ></script>
-<script src="js/css3-mediaqueries.js"  ></script>
-<script src="js/jquery.columnizer.min.js"  ></script>
-<!-- Isotope -->
-<script src="js/jquery.isotope.min.js"  ></script>
-<!-- Lof slider -->
-<script src="js/jquery.easing.js"  ></script>
-<script src="js/lof-slider.js"  ></script>
-<script src="js/superfish-1.4.8/js/hoverIntent.js"  ></script>
-<script src="js/superfish-1.4.8/js/superfish.js"  ></script>
-<script src="js/superfish-1.4.8/js/supersubs.js"  ></script>
-<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-<script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-<script src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<!--Controllers-->
-<script src="scripts/controllers/MainController.js"></script>
-<!--Directives-->
-<script src="scripts/directives/slider.js"></script>
-<script src="scripts/directives/post.js" ></script>
-<!--Services-->
-<script src="scripts/services/services.js"></script>
-<!--<script src="scripts/main.js" ></script>-->
-</body>
+    <script src="js/jquery-1.7.1.min.js"  ></script>
+    <script src="js/custom.js" ></script>
+    <script src="js/tabs.js" ></script>
+    <script src="js/css3-mediaqueries.js"  ></script>
+    <script src="js/jquery.columnizer.min.js"  ></script>
+    <script src="js/jquery.isotope.min.js"  ></script>
+    <script src="js/jquery.easing.js"  ></script>
+    <script src="js/lof-slider.js"  ></script>
+    <script src="js/superfish-1.4.8/js/hoverIntent.js"  ></script>
+    <script src="js/superfish-1.4.8/js/superfish.js"  ></script>
+    <script src="js/superfish-1.4.8/js/supersubs.js"  ></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <!--Angular-->
+    <!--Controllers-->
+    <script src="scripts/controllers/MainController.js"></script>
+    <!--Directives-->
+    <script src="scripts/directives/slider.js"></script>
+    <script src="scripts/directives/post.js" ></script>
+    <!--Services-->
+    <script src="scripts/services/services.js"></script>
+  </body>
 </html>

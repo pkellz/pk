@@ -6,7 +6,7 @@
 			"Why? Stricter laws won't solve the problem.",
 			"Well, we can't just let idiots roam around with guns..."
 		],
-		"img":"/images/ang.jpg"
+		"img":"img/dummies/featured/01.jpg"
 	},
 	{
 		"title":"Can't impeach him if he's #NotYourPresident.",
@@ -14,7 +14,7 @@
 		"comments":[
 			"XDDD that's funny"
 		],
-		"img":"/images/ang.jpg"
+		"img":"img/dummies/featured/02.jpg"
 	},
 	{
 		"title":"J Cole's droppin a new album!",
@@ -22,13 +22,31 @@
 		"comments":[
 			"Eh, guy's overrated if you ask me",
 			"no one asked you"
-			]
+			],
+		"img":"img/dummies/featured/03.jpg"
 	},
 	{
 		"title":"Rain drop",
 		"likes":0,
 		"comments":[
 			"Drop top!"
-		]
+		],
+		"img":"img/dummies/featured/04.jpg"
+	},
+	{
+		"title":"Touch and agree",
+		"likes":0,
+		"comments":[
+			"Dfdsfd!"
+		],
+		"img":"img/dummies/featured/05.jpg"
+	},
+	{
+		"title":"Bless Up",
+		"likes":0,
+		"comments":[
+			"Let's do it"
+		],
+		"img":"img/dummies/featured/06.jpg"
 	}
 ]

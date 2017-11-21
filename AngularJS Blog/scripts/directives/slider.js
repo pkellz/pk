@@ -5,6 +5,7 @@ app.directive("slider",function(){
      info:'=',
      index:'='
    },
+   //Add /pk/
    templateUrl:'/pk/AngularJS Blog/scripts/directives/slider.html',
    link: function(scope, element, attr)
    {
@@ -14,8 +15,7 @@ app.directive("slider",function(){
      	//##########################################
      	// COLUMNIZR
      	//##########################################
-
-     	$('.multicolumn').columnize({
+      $('.multicolumn').columnize({
      		columns: 2
      	});
      	//##########################################
@@ -28,7 +28,7 @@ app.directive("slider",function(){
       $('#mycarousel-vertical').jcarousel({
              // Configuration goes here (http://sorgalla.com/projects/jcarousel/)
           vertical: true
-         });
+        });
      	//##########################################
      	// LOF SLIDER
      	//##########################################
@@ -69,7 +69,7 @@ app.directive("slider",function(){
       //##########################################
      	// Filter - Isotope
      	//##########################################
-     	var $container = $('#filter-container');
+     var $container = $('#filter-container');
      	$container.imagesLoaded( function(){
      		$container.isotope({
      			itemSelector : 'figure',
@@ -172,6 +172,12 @@ app.directive("slider",function(){
      		$container.isotope('reLayout');
 
      	}).trigger("resize");
+
+
+
+
+
+
      });//close
    }
  };

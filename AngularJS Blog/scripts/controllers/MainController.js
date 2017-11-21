@@ -41,10 +41,15 @@
 		}
 	}
 	$scope.id = $routeParams.id;
+  $scope.burgers = [
+    {id: 1, name:"Sonic"},
+    {id: 2, name:"SSCB"},
+  ];
  }]);
 
  app.config(function($routeProvider){
 	 $routeProvider
+   //Add /pk/
 		.when("/view1",{
 			controller:"MainController",
 			templateUrl:"/pk/AngularJS Blog/scripts/views/home.html"
@@ -52,7 +57,7 @@
 		})
 		.when("/post/:id",{
 			controller:"MainController",
-			templateUrl:"/AngularJS Blog/scripts/views/postview.html"
+			templateUrl:"/pk/AngularJS Blog/scripts/views/postview.html"
 		})
 		.when("/about",{
 			controller:"AboutController",

@@ -3,7 +3,7 @@
 		var defer=$q.defer();
 		this.getPosts=function()
 		{
-			$http.get("/AngularJS Blog/scripts/vendor/posts.json")
+			$http.get("/pk/AngularJS Blog/scripts/vendor/posts.json")
 				.then(success,error);
 		};
 		function success(response)
