@@ -27,7 +27,7 @@
         <!--Comment Box-->
         <div id="comment-box">
             <div><h3>Comments</h3></div>
-            <div class="comment" ng-repeat="com in posts[id].comments">
+            <div class="comment" ng-repeat="com in posts[id].comments track by $index">
               <h5>{{com}}</h5>
             </div>
             <div class="suggestion-box comment">
