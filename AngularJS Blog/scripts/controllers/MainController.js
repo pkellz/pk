@@ -41,14 +41,22 @@
 		}
 	}
 	$scope.id = $routeParams.id;
-
+  $scope.nextId = $scope.id + 1;
   $scope.parsePlus = function(json, n)
   {
-    return json+n;
+    var count = Object.keys($scope.posts).length;
+    if(json < count-1)
+      return json+n;
+    else
+      return json;
   }
   $scope.parseMinus = function(json, n)
   {
-    return json-n;
+    if(json > 0)
+      return json-n;
+    else
+      return json;
+
   }
  }]);
 
