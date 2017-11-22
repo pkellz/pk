@@ -80,8 +80,6 @@ app.directive("slider",function(){
          animationEngine: 'jquery' // was jquery
        });
      });
-
-
      	// filter buttons
      	$('#filter-buttons a').click(function(){
      		// select current
@@ -171,13 +169,13 @@ app.directive("slider",function(){
      	// Resize event
      	//##########################################
 
-        $(window).resize(function() {
+      $(window).resize(function() {
 
-            var w = $(window).width();
-            //console.log("Width: " + w);
-            $container.isotope('reLayout');;
+          var w = $(window).width();
+          //console.log("Width: " + w);
+          $container.isotope('reLayout');;
 
-        }).trigger("resize");
+      }).trigger("resize");
 
      });//close
    }
