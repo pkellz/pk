@@ -1,4 +1,4 @@
- <div class="post ind">
+<!-- <div class="post ind">
 	<h2>{{posts[id].title}}</h2>
 	<h5>Upvotes: {{posts[id].likes}} | <a href="#!/view1">Back</a></h5>
 	<hr>
@@ -14,4 +14,86 @@
 	<br>
 	<br>
 	<div class="btn btn-info" role="btn" ng-click="addComment(id)">Submit</div>
+</div>
+-->
+
+<div id="main">
+  <div class="wrapper cf">
+    <!-- portfolio content-->
+    <div id="portfolio-content" class="cf">
+      <!-- project pager -->
+      <div class="project-pager cf">
+        <a class="previous-project" href="#!/post/{{parseMinus(posts[id].id,1)}}">&#8592; Previous Post</a>
+        <a class="next-project" href="#!/post/{{parsePlus(posts[id].id,1)}}">Next Post &#8594;</a>
+      </div>
+      <!-- ENDS project pager -->
+      <!-- project box -->
+      <div id="project-box" class="cf">
+        <!-- slider -->
+        <div class="project-slider">
+          <div class="flex-slider">
+            <ul class="slides">
+              <li style="text-align:center;"> <img src="{{posts[id].img}}" style="width:100%; height:350px;"> </li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- ENDS slider -->
+        <div class="info">
+          <p><strong>Author </strong> {{posts[id].author}}</p>
+          <p><strong>Date </strong> April 25, 2012</p>
+        </div>
+        <!-- entry-content -->
+        <div class="entry-content">
+          <h2 class="heading">{{posts[id].title}}</h2>
+          <div class="multicolumn">
+            <p>{{posts[id].title}}</p>
+          </div>
+        </div>
+        <!-- ENDS entry content -->
+      </div>
+      <!-- ENDS project box -->
+      <!-- related -->
+      <div class="related-projects">
+        <h4 class="related-heading">Related projects</h4>
+        <div class="related-list cf">
+          <figure>
+            <a href="#!/post/{{parseMinus(posts[id].id, 2)}}" class="thumb">
+              <img src="{{posts[id-2].img}}" alt="">
+            </a>
+            <a href="#!/post/{{parseMinus(posts[id].id, 2)}}" class="heading">
+              {{posts[id-2].title}}
+            </a>
+          </figure>
+          <figure>
+             <a href="#!/post/{{parseMinus(posts[id].id, 1)}}" class="thumb">
+               <img src="{{posts[id-1].img}}" alt="">
+             </a>
+             <a href="#!/post/{{parseMinus(posts[id].id, 1)}}" class="heading">
+               {{posts[id-1].title}}
+             </a>
+          </figure>
+          <figure>
+             <a href="#!/post/{{parsePlus(posts[id].id, 1)}}" class="thumb">
+               <img src="{{posts[id+1].img}}" alt="">
+             </a>
+             <a href="#!/post/{{parsePlus(posts[id].id, 1)}}" class="heading">
+               {{posts[id+1].title}}
+             </a>
+          </figure>
+          <figure>
+             <a href="#!/post/{{parsePlus(posts[id].id, 2)}}" class="thumb">
+               <img src="{{posts[id+2].img}}" alt="">
+             </a>
+             <a href="#!/post/{{parsePlus(posts[id].id, 2)}}" class="heading">
+               {{posts[id+2].title}}
+             </a>
+          </figure>
+        </div>
+      </div>
+      <!-- ENDS related -->
+    </div>
+    <!-- ENDS portfolio content-->
+  </div>
+  <!-- ENDS WRAPPER -->
 </div>

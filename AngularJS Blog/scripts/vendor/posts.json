@@ -1,52 +1,64 @@
 [
 	{
+		"id":0,
 		"title":"Should we push for stricter gun control laws?",
 		"likes":0,
+		"author": "Patrick Scott",
 		"comments":[
 			"Why? Stricter laws won't solve the problem.",
 			"Well, we can't just let idiots roam around with guns..."
 		],
-		"img":"img/dummies/featured/01.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/01.jpg"
 	},
 	{
+		"id":1,
 		"title":"Can't impeach him if he's #NotYourPresident.",
 		"likes":0,
+		"author": "Max Scott",
 		"comments":[
 			"XDDD that's funny"
 		],
-		"img":"img/dummies/featured/02.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/02.jpg"
 	},
 	{
+		"id":2,
 		"title":"J Cole's droppin a new album!",
 		"likes":0,
+		"author": "Michael Smith",
 		"comments":[
 			"Eh, guy's overrated if you ask me",
 			"no one asked you"
 			],
-		"img":"img/dummies/featured/03.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/03.jpg"
 	},
 	{
+		"id":3,
 		"title":"Rain drop",
 		"likes":0,
+		"author": "Victoria White",
 		"comments":[
 			"Drop top!"
 		],
-		"img":"img/dummies/featured/04.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/04.jpg"
 	},
 	{
+		"id":4,
 		"title":"Touch and agree",
 		"likes":0,
+		"author": "John Doe",
 		"comments":[
 			"Dfdsfd!"
 		],
-		"img":"img/dummies/featured/05.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/05.jpg"
 	},
 	{
+		"id":5,
 		"title":"Bless Up",
 		"likes":0,
+		"author": "Shane Keitt",
 		"comments":[
 			"Let's do it"
 		],
-		"img":"img/dummies/featured/06.jpg"
+		"img":"/pk/AngularJS Blog/img/dummies/featured/06.jpg"
 	}
 ]

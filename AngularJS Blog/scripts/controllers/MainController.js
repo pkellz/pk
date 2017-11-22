@@ -41,6 +41,15 @@
 		}
 	}
 	$scope.id = $routeParams.id;
+
+  $scope.parsePlus = function(json, n)
+  {
+    return json+n;
+  }
+  $scope.parseMinus = function(json, n)
+  {
+    return json-n;
+  }
  }]);
 
  app.config(function($routeProvider){
