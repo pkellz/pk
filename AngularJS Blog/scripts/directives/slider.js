@@ -9,9 +9,10 @@ app.directive("slider",function(){
    templateUrl:'/pk/AngularJS Blog/scripts/directives/slider.html',
    link: function(scope, element, attr)
    {
+
+
      // Jquery with no conflict
      jQuery(document).ready(function($) {
-
      	//##########################################
      	// COLUMNIZR
      	//##########################################
@@ -52,11 +53,11 @@ app.directive("slider",function(){
      	// Superfish
      	//##########################################
      	$("ul.sf-menu").superfish({
-             animation: {height:'show'},   // slide-down effect without fade-in
-             delay:     800 ,              // 1.2 second delay on mouseout
-             autoArrows:  false,
-             speed: 100
-         });
+        animation: {height:'show'},   // slide-down effect without fade-in
+        delay:     800 ,              // 1.2 second delay on mouseout
+        autoArrows:  false,
+        speed: 100
+      });
       //##########################################
      	// PROJECT SLIDER
      	//##########################################
@@ -69,15 +70,18 @@ app.directive("slider",function(){
       //##########################################
      	// Filter - Isotope
      	//##########################################
-     var $container = $('#filter-container');
-     	$container.imagesLoaded( function(){
-     		$container.isotope({
-     			itemSelector : 'figure',
-     			filter: '*',
-     			resizable: false,
-     			animationEngine: 'jquery'
-     		});
-     	});
+
+    var $container = $('#filter-container');
+     $('html').imagesLoaded( function(){
+       $container.isotope({
+         itemSelector : 'figure',
+         filter: '*',
+         resizable: false, //was false
+         animationEngine: 'jquery' // was jquery
+       });
+     });
+
+
      	// filter buttons
      	$('#filter-buttons a').click(function(){
      		// select current
@@ -166,17 +170,14 @@ app.directive("slider",function(){
      	//##########################################
      	// Resize event
      	//##########################################
-     	$(window).resize(function() {
-     		var w = $(window).width();
-     		//console.log(w);
-     		$container.isotope('reLayout');
 
-     	}).trigger("resize");
+        $(window).resize(function() {
 
+            var w = $(window).width();
+            //console.log("Width: " + w);
+            $container.isotope('reLayout');;
 
-
-
-
+        }).trigger("resize");
 
      });//close
    }
