@@ -10,9 +10,9 @@ app.directive("slider",function(){
    link: function(scope, element, attr)
    {
 
-
      // Jquery with no conflict
-     jQuery(document).ready(function($) {
+    jQuery(document).ready(function($) {
+
      	//##########################################
      	// COLUMNIZR
      	//##########################################
@@ -168,16 +168,12 @@ app.directive("slider",function(){
      	//##########################################
      	// Resize event
      	//##########################################
-
       $(window).resize(function() {
-
           var w = $(window).width();
-          //console.log("Width: " + w);
           $container.isotope('reLayout');;
-
       }).trigger("resize");
 
-     });//close
+    });//close
    }
  };
 });

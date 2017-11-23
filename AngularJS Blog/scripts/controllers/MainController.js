@@ -26,7 +26,7 @@
 			$scope.newPost = null;
 		}
 	}
-	//Add a new comment
+	//Add a new commentl
 	$scope.addComment = function(index)
 	{
 		if($scope.newComment == null)
