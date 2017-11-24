@@ -172,7 +172,7 @@ app.directive("slider",function(){
           var w = $(window).width();
           $container.isotope('reLayout');;
       }).trigger("resize");
-
+      
     });//close
    }
  };

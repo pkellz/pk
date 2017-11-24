@@ -9,48 +9,30 @@
 //Add Fade In
 (function($)
 {
-  $('*').each(function()
+  $.fn.tooltip = function()
   {
-    var $this = $(this);
-    if($this.attr('title'))
+    if($(this).attr('title'))
     {
-      $this.data('title',$(this).attr('title'));
-      $this.removeAttr('title');
-      $this.css({'cursor':'pointer'});
+      $(this).addClass('tipElement');
     }
-  });
 
-  var tipBoxStyles = {
-    'text-align':'center',
-    'justify-content':'center',
-    'display':'flex',
-    'align-items':'center',
-    'background':'rgba(100,100,100,0.85)',
-    'position':'absolute',
-    'padding':'1%',
-    
-    'border-radius':'2px',
-    'color':'white',
-    'border-bottom':'2px solid lightblue',
-    'box-shadow':'0px 1px 3px #333',
-    'font-size':'13px',
-    'font-weight':'bold'
-  };
+    var tipElem = $('.tipElement');
 
-  var tipTextStyles = {
-      'font-family':'Verdana'
-  };
+    tipElem.each(function() {
+      var $toolTipText = $(this).attr('title');
+      $(this).removeAttr('title');
 
-  var $tipBox = $('<div>').css(tipBoxStyles);
+      var $toolTipSpan = $('<span/>', {class: 'tooltip', text: $toolTipText});
 
-  $.fn.showToolTip = function()
-  {
-    var $tipText = $('<span>').css(tipTextStyles).append($(this).data("title"));
-    $(this).append($tipBox.append($tipText));
-  }
-  $.fn.hideToolTip = function()
-  {
-    $tipBox.remove();
-    $tipBox.empty();
+      if ($toolTipText) $toolTipSpan.appendTo($(this));
+
+      $(this).on('mouseenter',function()
+      {
+        $(this).find('span').css({'opacity':'0.8','transform':'scaleY(1)'});
+      }).on('mouseleave',function()
+      {
+        $(this).find('span').css({'opacity':'0','transform':'scaleY(0)'});
+      });
+    });
   }
 })(jQuery);
