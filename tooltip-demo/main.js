@@ -1,4 +1,11 @@
 $(function()
 {
-  $('h1,h2,h3,h4,h5,a').tooltip();
+  $('h1').tooltip({
+    'backgroundColor':'lightblue',
+    'border':'1px solid black'
+  });
+
+  $('h2').tooltip({
+    'backgroundColor':'orange'
+  })
 });

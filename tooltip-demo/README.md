@@ -3,23 +3,28 @@
 Basic jquery tooltip plugin.
 
 # Installation
-## Load jQuery and include the plugin file
+## Load the jQuery file, the plugin file, and the plugin stylesheet
 
 ```html
 <head>
    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
    <script type="text/javascript" src="tooltip.js"></script>
+   <link type="text/css" rel="stylesheet" href="tooltip.css"></link>
 </head>
 ```
 
 
 ## Initialization and Usage
-To use the plugin, simply target the element(s) you want to use this plugin for when hovered.
+To use the plugin, simply add the title attribute in your HTML to the element you want to add the tooltip.
+```html
+<p class="paragraph" title="Tooltips Are Fun!">Hover Over Me!</p>
+```
+Then, initialize the tooltip in your javascript code.
 
 ```javascript
 $(function()
 {
-  $('p').tooltip();
+  $('.paragraph').tooltip();
 });
 
 ```
