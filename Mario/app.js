@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded",function()
   var material = new THREE.MeshStandardMaterial({
     color:0xffffff,
     map:new THREE.TextureLoader().load('./mario.jpg'),
-    metalness:1,
-    roughness:0.3
+    metalness:0.9,
+    roughness:0.4
   });
   var mesh = new THREE.Mesh(geometry,material);
 
