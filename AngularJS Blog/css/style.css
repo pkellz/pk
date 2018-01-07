@@ -43,14 +43,6 @@ body a {
 body p {
   margin-bottom: 21px;
 }
-#main h1,
-#main h2,
-#main h3,
-#main h4,
-#main h5,
-#main h6 {
-  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-}
 #main,
 footer {
   line-height: 1.5em;
