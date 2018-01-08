@@ -6,8 +6,8 @@ body, html {
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
 	font-weight: 300;
-	width: 100% !important;
-	height: 100% !important;
+	width: 100vw !important;
+	height: 100vh !important;
 }
 h2 {
 	margin: 0 0 20px 0;
@@ -174,8 +174,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* Header Section */
 .intro {
-	display: table;
-	width: 100%;
+	/*display: table;*/
+	width: 100vw;
 	padding: 0;
 	background: url(../img/intro-bg.jpg) no-repeat center center;
 	background-color: #e5e5e5;
@@ -184,6 +184,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 	-o-background-size: cover;
 }
+
 .intro .overlay {
 	background: rgba(0,0,0,0.4);
 }
@@ -631,10 +632,11 @@ body
 {
   padding:5px;
   margin:0;
-  width:100%;
+  width:100vw;
 }
 .ticker
 {
+	overflow-x: hidden;
   font-family: Cabin;
   padding:10px;
   width:100vw;
