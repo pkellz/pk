@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
 @import url('https://fonts.googleapis.com/css?family=Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -18,7 +19,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Cabin","Raleway", Arial, sans-serif;
+  font-family:"Quicksand","Cabin","Raleway", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -329,7 +330,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -349,7 +350,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-cover {
-  height: 900px;
+  height: 650px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -391,7 +392,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .gtco-cover .display-t,
 .gtco-cover .display-tc {
-  height: 850px;
+  height: 600px;
   display: table;
   width: 100%;
 }
@@ -583,7 +584,6 @@ form label {
   margin: 0;
   padding: 0;
   color: white;
-  /*text-transform: uppercase;*/
 }
 
 #gtco-header .display-tc h1,
@@ -595,7 +595,7 @@ form label {
   text-shadow: 0px 0px 12px lightblue;
   font-weight:700;
   color:#fff !important;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 768px) {
@@ -610,7 +610,7 @@ form label {
 #gtco-counter .display-tc h2,
 .gtco-cover .display-tc h2 {
   font-size: 26px;
-  font-family: "Cabin";
+  font-family: "Quicksand","Cabin";
   line-height: 1.5;
   margin-bottom: 30px;
   color:#ddd !important;
@@ -683,13 +683,6 @@ form label {
   .gtco-section {
     padding: 3em 0;
   }
-}
-
-#gtco-features-2 {
-  background: #efefef;
-  position: relative;
-  float: left;
-  width: 100%;
 }
 
 .feature-center {
@@ -1107,15 +1100,15 @@ h1#skills, .gtco-heading h2
 }
 
 .owl-carousel .owl-controls .owl-dot span {
-  background: #e6e6e6;
+  background: #363636;
 }
 
 .owl-carousel .owl-controls .owl-dot span:hover, .owl-carousel .owl-controls .owl-dot span:focus {
-  background: #cccccc;
+  background: #777;
 }
 
 .owl-carousel .owl-controls .owl-dot:hover span, .owl-carousel .owl-controls .owl-dot:focus span {
-  background: #cccccc;
+  background: #999;
 }
 
 .owl-carousel .owl-controls .owl-dot.active span {

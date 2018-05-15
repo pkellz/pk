@@ -1,10 +1,12 @@
 var toContact = function()
 {
-	$("html, body").animate({ scrollTop: $(document).height() }, 5000, 'easeInOutExpo');
+	$("html, body").animate({ scrollTop: $(document).height() }, 4000, 'easeInOutExpo');
 }
 ;(function () {
 
-	'use strict';
+	// 'use strict';
+
+
 
 
 	var mobileMenuOutsideClick = function() {
