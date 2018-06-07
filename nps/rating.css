@@ -1,0 +1,727 @@
+/*  Border box sizing
+   -------------------------------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*  Global reset
+   -------------------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+/*  HTML5 display definitions
+   -------------------------------------------------------------------------- */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+    display: block;
+    -webkit-backface-visibility: hidden;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+/*  Base
+   -------------------------------------------------------------------------- */
+*,
+*:before,
+*:after,
+input {
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Interstate";
+  src: local('☁'), url(Interstate-Light.woff) format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Interstate";
+  src: local('☁'), url(Interstate-Regular.woff) format("woff");
+  font-weight: normal;
+}
+
+html {
+    background: #fff;
+    color: #434343;
+    font-family: "Interstate", "Roboto", sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#main {
+    padding-bottom: 60%;
+}
+
+/*  - Clear floats
+   ========================================================================== */
+
+.clear-float:before,
+.clear-float:after {
+    display: table;
+    content: " ";
+}
+
+.clear-float:after {
+    clear: both;
+}
+
+.logo img {
+  display: block;
+  margin: auto;
+  height: auto;
+  max-width: 200px;
+}
+
+/*  Links
+   -------------------------------------------------------------------------- */
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+/*  Lists
+   -------------------------------------------------------------------------- */
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+/*  Forms
+   -------------------------------------------------------------------------- */
+
+legend {
+    display: table;
+    white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+textarea {
+    font-family: "Interstate-Light";
+    overflow: auto;
+    vertical-align: top;
+}
+
+label[for],
+input[type="checkbox"],
+input[type="radio"],
+select {
+    cursor: pointer;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
+/*  Custom select
+   -------------------------------------------------------------------------- */
+
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.custom-select-container select {
+    position: relative;
+    z-index: 1;
+    border: 0;
+    vertical-align: top;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.custom-select {
+    font-family: "Interstate";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-select.hover {
+
+}
+
+.custom-select.active {
+
+}
+
+
+/*  Global styles
+   -------------------------------------------------------------------------- */
+
+h1 {
+    margin: 0 0 24px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+}
+
+p, h2 {
+    font-family: "Interstate-Light" !important;
+    margin: 0 12px 44px 12px;
+    font-size: 13px;
+    line-height: 1.7;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+}
+
+p {
+    margin: 0 0 32px;
+}
+
+.page,
+form {
+    padding: 36px 14px 0;
+}
+
+label {
+    display: block;
+    margin: 0 0 9px;
+    font-size: 13px;
+    line-height: 19px;
+    color: black;
+}
+
+select {
+    width: 290px;
+    height: 32px;
+}
+
+.options {
+    font-size: 13px;
+    color: #707070;
+}
+
+    @media screen and (min-width: 25em) {
+        h1 {
+            font-size: 20px;
+            line-height: 32px;
+            margin: 0 0 24px;
+        }
+
+        p, h2 {
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .page,
+        form {
+            padding: 36px 37px 0;
+        }
+
+        label {
+            font-size: 13px;
+            line-height: 19px;
+        }
+
+        select {
+            width: 290px;
+            height: 32px;
+        }
+
+
+
+        .options {
+            font-size: 13px;
+            color: #707070;
+        }
+    }
+
+.custom-select-container {
+    margin: 0 0 40px;
+}
+
+.custom-select {
+    padding: 0 15px 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    line-height: 32px;
+    color: #707070;
+    border: 1px solid #d0cfcf;
+    border-radius: 4px;
+}
+
+    .custom-select:after {
+        content: '';
+        width: 10px;
+        height: 32px;
+        right: 10px;
+        top: 45%;
+        background:
+url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwIiB5PSIwIiB3aWR0aD0iOS40NiIgaGVpZ2h0PSI1Ljk1IiB2aWV3Qm94PSIwIiB4bWw6c3BhY2U9InByZXNlcnZlIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5LjQ2IDUuOTU0Ij4KICA8cGF0aCBpZD0iZHJvcGRvd24tYXJyb3ciIGQ9Ik00LjcyIDUuOTVMMCAxLjI0bDEuMTQtMS4wOUw0Ljc3IDMuNzcgOC4zIDAgOS40NiAxLjE2IDQuNzIgNS45NXoiIHN0eWxlPSJjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsLXJ1bGU6ZXZlbm9kZDtmaWxsOiMzMTMxMzEiLz4KPC9zdmc+") no-repeat 0 0;
+/*            background-size: 10px 6px;*/
+        position: absolute;
+    }
+
+    @media screen and (min-width: 25em) {
+        .custom-select-container {
+            margin: 0 0 40px;
+        }
+
+        .custom-select {
+            font-size: 13px;
+            line-height: 32px;
+        }
+
+        .custom-select:after {
+            width: 10px;
+            height: 32px;
+            right: 10px;
+            background:
+url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwIiB5PSIwIiB3aWR0aD0iOS40NiIgaGVpZ2h0PSI1Ljk1IiB2aWV3Qm94PSIwIiB4bWw6c3BhY2U9InByZXNlcnZlIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5LjQ2IDUuOTU0Ij4KICA8cGF0aCBpZD0iZHJvcGRvd24tYXJyb3ciIGQ9Ik00LjcyIDUuOTVMMCAxLjI0bDEuMTQtMS4wOUw0Ljc3IDMuNzcgOC4zIDAgOS40NiAxLjE2IDQuNzIgNS45NXoiIHN0eWxlPSJjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsLXJ1bGU6ZXZlbm9kZDtmaWxsOiMzMTMxMzEiLz4KPC9zdmc+") no-repeat 0 0;
+/*            background-size: 10px 6px;*/
+        }
+    }
+
+
+.yourapp {
+    display: block;
+    margin: 0 auto;
+    width: 152px;
+    height: 106px;
+    text-indent: -999px;
+    background: url('logo.png') top center no-repeat;
+    background-size: 125px 125px;
+}
+
+    @media screen and (min-width: 25em) {
+        .yourapp {
+            width: 152px;
+            height: 106px;
+            background: url('logo.png') top center no-repeat;
+            background-size: 100px 100px;
+        }
+    }
+
+.button {
+    display: block;
+    float: none;
+    width: 146px;
+    height: 38px;
+    border-radius: 4px;
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    line-height: 38px;
+
+    border: none;
+    background: #37A1D9;
+}
+
+@media screen and (min-width: 25em) {
+    .button {
+        width: 146px;
+        margin: 0 auto;
+    }
+}
+
+
+/*  Page rating
+   -------------------------------------------------------------------------- */
+
+#page-rate h2 {
+    padding: 0;
+}
+
+.rating-elements {
+    padding-left: 4px;
+}
+
+#slide-indicator {
+    display: block;
+    margin: 0;
+    height: 12px;
+    position: relative;
+    z-index: 5;
+}
+    #slide-indicator li {
+        height: 12px;
+        text-align: left;
+        float: left;
+        text-decoration: none;
+        border-right: 1px solid rgba(10,10,10,.1);
+        width: 10%;
+    }
+
+    #slide-indicator li:first-child {
+        border-radius: 6px 0 0 6px;
+    }
+
+    #slide-indicator li:last-child {
+        border: none;
+    }
+
+    #slide-indicator .item-9:after,
+    #slide-indicator span {
+        font-family: "Interstate";
+        font-size: 10px;
+        color: #bababa;
+        line-height: 2;
+        position: absolute;
+        top: -24px;
+        margin-left: -2px;
+    }
+
+    #slide-indicator .item-9:after {
+        content: '10';
+        right: 0;
+    }
+
+    #slide-indicator .item-1 span {
+        margin: 0;
+    }
+
+    #slide-indicator li.active {
+        background: #37A1D9;
+    }
+
+#count {
+    background: #f2f4f7;
+    top: -12px;
+    position: relative;
+    height: 12px;
+    width: 100%;
+    border: solid 1px #dedede;
+    border-radius: 6px;
+    display: block;
+}
+
+    #count a {
+        width: 28px;
+        height: 28px;
+        text-align: center;
+        border-radius: 50%;
+        border: none;
+        top: 0;
+        margin: -10px 0 0 -16px;
+        position: absolute;
+        outline: none;
+        z-index: 10 !important;
+        background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+        background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+        box-shadow: 0px 1px 2px #aaa, inset 0px -1px 1px #dfdfdf;
+    }
+
+    #count a div {
+        width: 100%;
+        height: 100%;
+    }
+
+.not-label,
+.very-label {
+    font-family: "Interstate";
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1;
+    color: black;
+    margin-top: 5px;
+}
+
+    .not-label {
+        float: left;
+    }
+
+    .very-label {
+        float: right;
+    }
+
+.user-rating {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 40px 0;
+    text-rendering: optimizeLegibility;
+}
+
+    #current-value {
+        display: inline-block;
+        color: black;
+        width: 1px; /* Prevents "Your Rating:" from shifting when value changes */
+    }
+
+    .user-rating .small-text {
+        display: inline;
+        color: #343434;
+    }
+
+@media screen and (min-width: 25em) {
+
+    #page-rate h2 {
+        padding: 0 40px;
+        margin: 0 0 65px 8px;
+    }
+
+    #slide-indicator {
+        height: 12px;
+    }
+        #slide-indicator li {
+            height: 12px;
+        }
+
+    #slide-indicator .item-9:after,
+    #slide-indicator span {
+        top: -24px;
+        margin-left: -4px;
+        font-size: 10px;
+        color: #bababa;
+    }
+
+    div.ui-slider {
+        margin: 0 0 7px;
+    }
+
+    #count {
+        top: -12px;
+        height: 12px;
+    }
+
+    #count a {
+        width: 28px;
+        height: 28px;
+        margin: -10px 0 0 -16px;
+    }
+
+    .not-label,
+    .very-label {
+        margin: 14px 0;
+        font-size: 11px;
+    }
+
+    .user-rating {
+        margin: 10px 0 80px 0;
+        font-size: 16px;
+    }
+}
+
+/*  Page thank you, rate us on appstore
+   -------------------------------------------------------------------------- */
+
+#page-thankyou,
+#page-rate-us {
+    padding-top: 43px;
+    padding-bottom: 50px;
+}
+    #page-thankyou .yourapp,
+    #page-rate-us .yourapp {
+        margin-bottom: 36px;
+    }
+
+    #page-thankyou h1,
+    #page-rate-us h1 {
+        margin-bottom: 20px;
+    }
+
+    #page-thankyou p,
+    #page-rate-us p {
+        padding: 0 18px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #page-thankyou .button {
+            width: 146px;
+            margin: 0 auto;
+            display: block;
+    }
+
+    @media screen and (min-width: 25em) {
+        #page-thankyou,
+        #page-rate-us {
+            padding-top: 74px;
+        }
+
+        #page-thankyou .yourapp,
+        #page-rate-us .yourapp {
+            margin-bottom: 36px;
+        }
+
+        #page-thankyou p {
+            padding: 0 80px;
+            margin-bottom: 40px;
+        }
+
+        #page-rate-us p {
+            padding: 0 60px;
+            margin-bottom: 40px;
+        }
+
+        #page-thankyou .button,
+        #page-rate-us .button {
+            width: 146px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+
+/*  Page feedback
+   -------------------------------------------------------------------------- */
+#page-feedback {
+    padding-bottom: 50px;
+}
+    #page-feedback label {
+        margin-left: 0px;
+    }
+
+    #page-feedback textarea {
+        -webkit-appearance: none;
+        width: 294px;
+        height: 115px;
+        padding: 7px;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        background: #fff;
+        margin: 0 0 30px;
+        color: #707070;
+        font-size: 13px;
+/*        box-shadow: inset 0px 1px 2px rgba(0,0,0,.15);*/
+    }
+
+    #page-feedback textarea,
+    #page-feedback select {
+        margin-left: 0px;
+    }
+
+    @media screen and (min-width: 25em) {
+        #page-feedback textarea {
+            width: 100%;
+        }
+    }
+
+
+/*  Page visibility
+   -------------------------------------------------------------------------- */
+
+#page-thankyou,
+#page-rate,
+#page-rate-us,
+#page-feedback {
+    display: none;
+}
+
+/*** pkellz ***/
+input[type="radio"] + label
+{
+  display:inline;
+}
+#init-form
+{
+  text-align: center;
+  padding:20px;
+}
