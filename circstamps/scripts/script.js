@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){
   initParticles();
-  const continer = document.getElementsByClassName("container")[0]
   const swSpan = document.getElementById("six-weeks-span")
   const smSpan = document.getElementById("six-months-span")
   const eotSpan = document.getElementById("end-of-term-span")
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded",function(){
 function initParticles()
 {
   particlesJS.load('particles-js', 'assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
+    console.log('callback - particles.js config loaded')
   });
 }
 function transformDate(targetDate, days)
