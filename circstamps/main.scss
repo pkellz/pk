@@ -8,24 +8,39 @@ body
   background: url("images/bg.jpg") no-repeat  55%;
   position: relative;
   font-family: "Quicksand", sans-serif;
+  overflow:hidden;
+  height:100%;
+}
+#particles-js
+{
+  margin-top:-50%;
 }
 h1
 {
   font-size: 34px;
 }
+.main
+{
+  height:100vh;
+  width:100vw;
+  overflow: auto;
+  text-align: center;
+}
+.main::before
+{
+  content:' ';
+  display: inline-block;
+  vertical-align: middle;
+  height:100%;
+}
 .container
 {
+  display: inline-block;
+  vertical-align: middle;
   color:$primary-text;
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-  margin:auto;
-  position: absolute;
-  width:50%;
-  left:50%;
-  transform:translate(-50%,30%);
   span
   {
-    font-size:24px;
+    font-size:20px;
     color:$secondary-text;
   }
 }
