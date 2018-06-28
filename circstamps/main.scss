@@ -11,12 +11,6 @@ body
   overflow:hidden;
   height:100%;
 }
-#particles-js
-{
-  height:100%;
-
-  margin-top:-55%;
-}
 canvas
 {
   height:800px;
@@ -70,4 +64,9 @@ h1
       cursor:pointer;
     }
   }
+}
+#particles-js
+{
+  height:100%;
+  margin-top:-55%;
 }
