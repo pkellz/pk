@@ -9,6 +9,8 @@ body {
   height: 100%; }
 
 #particles-js {
+  height: 700px;
+  background-size: cover;
   margin-top: -50%; }
 
 h1 {
