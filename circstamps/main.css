@@ -10,7 +10,10 @@ body {
 
 #particles-js {
   height: 100%;
-  margin-top: -40%; }
+  margin-top: -55%; }
+
+canvas {
+  height: 800px; }
 
 h1 {
   font-size: 34px; }
