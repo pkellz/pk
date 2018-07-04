@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 body, html {
 	font-family: 'Raleway', sans-serif;
@@ -630,17 +631,16 @@ body
 }
 .ticker ul
 {
-  padding:5px;
   margin:0;
-  width:100vw;
+  width:100%;
 }
 .ticker
 {
-	overflow-x: hidden;
-  font-family: Cabin;
+  font-family: "Quicksand";
   padding:10px;
   width:100vw;
-  background: linear-gradient(#444,#111)
+  border-bottom:1px solid #555;
+  background: linear-gradient(#222,#222)
 }
 .ticker li
 {
@@ -660,7 +660,7 @@ body
 }
 .top
 {
-  font-size:18px;
+  font-size:16px;
   font-weight: bold;
 }
 .top, .bottom
@@ -681,7 +681,7 @@ body
 }
 .pct_down
 {
-  color:#A02426;
+  color:#d32426;
 }
 .pct_none
 {

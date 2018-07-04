@@ -17,19 +17,19 @@
       startIndex:0,               // default startIndex is 0, most likely 'bitcoin'
       top5:false,                 // returns top 5 coins by market cap - will not set if any of the above is already set
       top10:false,                // returns top 10 coins by market cap - will not set if any of the above is already set
-      speed:30000,                // time until slide ends - default 30 seconds
+      speed:10000,                // time until slide ends - default 30 seconds
       fadeInOutSpeed:2500,        // time it takes to fade out after slide animation ends - default 2.5 seconds,
       resetSpeed:1000,            // time it takes for the ticker to reset position after fading out - default 1 second
-      separatorColor: '#999999',  // default separator color
-      separatorWidth:5,           // default separator width (px)
-      nameColor:'#2eabc9',        // default name color
+      separatorColor: '#555',  // default separator color
+      separatorWidth:1,           // default separator width (px)
+      nameColor:'#F9B016',        // default name color
       priceColor:'#ffffff',       // default price color
       capColor:'#ffffff',         // default market cap color
     }
 
     $.extend(settings, options);
 
-    let api = 'https://api.coinmarketcap.com/v1/ticker/'
+    const api = 'https://api.coinmarketcap.com/v1/ticker/'
     let endpoint;
 
     //Remember 'id' needs a '/' but ?limit=n does not
@@ -45,31 +45,40 @@
       endpoint = `?start=${settings.startIndex}&limit=10` //default query if no matching options are provided
 
     let url = api+endpoint
-    fetch(`${url}`)
-    .then(res=>
-    {
-      if(res.status !== 200)
-      {
-        console.log("Invalid Coin or Bad Request");
-        throw new err
-      }
-      else
-        return res.json()
-    })
-    .then(data=>
-    {
-      renderData(data,this,settings)
-    })
-    .catch(()=>
-    {
-      console.log('caught')
-    })
+    fetchData(url,this,settings)
   }
 })(jQuery)
 
-function renderData(data,_this,opts)
+function fetchData(url,_this,settings)
 {
-  _this.append("<ul>");
+  console.log("Fetching New Data");
+  fetch(url)
+  .then(res=>
+  {
+    if(res.status !== 200)
+    {
+      console.log("Invalid Coin or Bad Request");
+      throw new err
+    }
+    else
+      return res.json()
+  })
+  .then(data=>
+  {
+    renderData(data,_this,settings,url)
+  })
+  .catch(()=>
+  {
+    console.log('caught')
+  })
+}
+
+function renderData(data,_this,opts,url)
+{
+  // _this.empty();
+  console.log(_this.children("ul"));
+  if(_this.children("ul").length == 0)
+    _this.append("<ul>");
 
   data.forEach((data, index)=>
   {
@@ -80,8 +89,8 @@ function renderData(data,_this,opts)
           symbol
         } = data
     //variable to determine if the pct_24 was positive or negative
-    let pctChangeSign = pct_24.split('')[0] == '-' ? 'pct_down' : 'pct_up'
-    let arrow = pctChangeSign == 'pct_down' ? 'fa-caret-down' : 'fa-caret-up'
+    const pctChangeSign = pct_24.split('')[0] == '-' ? 'pct_down' : 'pct_up'
+    const arrow = pctChangeSign == 'pct_down' ? 'fa-caret-down' : 'fa-caret-up'
     //make sure pct_24 has 2 decimal places
     if (pct_24.split('.')[1].length != 2)
       pct_24 = pct_24 + '0';
@@ -117,9 +126,9 @@ function renderData(data,_this,opts)
     let newestLiWidth = _this.find("li:last-child").css('width')
     _this.children("ul").css({'width':'+='+newestLiWidth});
   })
-  beginSliding(_this,opts)
+  beginSliding(_this,opts,url)
 }
-function beginSliding(_this,opts)
+function beginSliding(_this,opts,url)
 {
   let ul = _this.find("ul")
   let { speed, fadeInOutSpeed, resetSpeed } = opts;
@@ -128,8 +137,13 @@ function beginSliding(_this,opts)
   let ulWidth = _this.css('width')
   ul.animate({'margin-left':`-=${ulWidth}`},speed, ()=>
   {
+
     ul.animate({'opacity':'0'},fadeInOutSpeed);
+    ul.empty();
+    ul.remove();
     ul.animate({'margin-left':'0px'},resetSpeed);
-    beginSliding(_this,opts)
+    // ul.remove();
+    fetchData(url,_this,opts);
+    // beginSliding(_this,opts)
   })
 }
