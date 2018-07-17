@@ -1,558 +1,181 @@
-<!DOCTYPE HTML>
-<!--
-	Solid by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
--->
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Patrick Scott | Full Stack NodeJS Developer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="pkellz. Full Stack NodeJS Developer" />
-	<meta name="keywords" content="Full Stack NodeJS Developer." />
-	<meta name="author" content="pkellz" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.ico" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <script type="module" src="scripts/helpers/map-styles.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/94/three.js" charset="utf-8"></script>
+  <script src="scripts/threeconfig.js" charset="utf-8"></script>
+  <script src="scripts/three/tween.min.js" charset="utf-8"></script>
+  <script src="scripts/three/css3drenderer.js" charset="utf-8"></script>
+  <script src="scripts/three/trackballcontrols.js" charset="utf-8"></script>
+  <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+  <title>Patrick Scott</title>
+</head>
+<body>
+<div class="body-overlay"></div>
+  <div class="more-container">
+    <div class="img-container">
+      <img src="" alt="">
+    </div>
+    <div class="desc-container">
+      <h2>
+        <span class="project-name"></span> -
+        <small>
+          <a href="" target="_blank">Go To Project</a>
+        </small>
+      </h2>
+      <p></p>
+    </div>
+    <div class="skills-container"></div>
+  </div>
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
- 	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <div class="avi">
+    <img src="images/nav.jpeg" alt="">
+  </div>
+  <ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="http://github.com/pkellz" target="_blank">Github</a></li>
+    <li><a href="https://www.youtube.com/channel/UCV4AXpDSxschk8I0sCl8JXw" target="_blank">Youtube</a></li>
+    <li><a href="https://drive.google.com/file/d/1CCSgbz5Hf_gPwi434J5RLPj9ISJrzkGj/view?usp=sharing" target="_blank">Resume</a></li>
+  </ul>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+  <div class="billboard">
+    <div class="overlay"></div>
+    <div class="text-container">
+      <h1>Patrick <strong class="gradient-text">Scott</strong></h1>
+      <h4>Full Stack NodeJS Developer</h4>
+      <small>B.S. Computer Science - University of South Carolina, Columbia</small>
+    </div>
+    <img src="images/billboard/moto1.jpg" alt="">
+    <img src="images/billboard/fire.jpg"   alt="">
+    <img src="images/billboard/moto2.jpg" alt="">
+  </div>
 
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+  <div class="talents">
+    <div class="left">
+      <h1>About Me</h1>
+      <p>
+        <span class="orange">Full Stack NodeJS Developer</span> who loves to code, ride motorcycles, and drum. <span class="orange">MERN stack specialist</span> and crypto-enthusiast. I enjoy creating <span class="orange">intuitive, dynamic user experiences</span>. View my skills on the right. (Try mousing over and scrolling!)
+      </p>
+    </div>
+    <div class="right">
+      <div id="container"></div>
+    </div>
+  </div>
 
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <div class="portfolio" id="portfolio">
+    <h4>Portfolio</h4>
+    <div class="grid-wrapper">
+      <!-- Availabook -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="Availabook" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/availabook.png" alt="">
+        <div class="info">Availabook</div>
+      </div>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+      <!-- Jobx -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="Jobx" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/jobx.png" alt="">
+        <div class="info">Jobx</div>
+      </div>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <!-- React Editor -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="Editor" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/editor.png" alt="">
+        <div class="info">ReactJS Live HTML Editor</div>
+      </div>
 
-	</head>
-	<body>
+      <!-- CryptoTicker -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="CryptoTicker" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/crypto.png" alt="">
+        <div class="info">Cryptoticker</div>
+      </div>
+      <!-- Keycode -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="Keycode" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/keycode.png" alt="">
+        <div class="info">Javascript Keycodes</div>
+      </div>
 
-	<div class="gtco-loader"></div>
+      <!-- Bitcoin -->
+      <div>
+        <div class="info-overlay">
+          <div class="see-more" id="Bitcoin" title="More Info">
+            <i class="fas fa-info-circle fa-4x"></i>
+          </div>
+        </div>
+        <img src="images/portfolio/bitcoin.png" alt="">
+        <div class="info">Bitcoin Model - Three.js</div>
+      </div>
+    </div>
+  </div>
 
-	<div id="page">
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container-fluid">
-			<div class="row">
-				<div class="col-xs-2">
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html" title="Home">Home</a></li>
-						<li><a href="https://github.com/pkellz" title="Check Out My Github Projects!" target="_blank">Github</a></li>
-						<li><a href="https://drive.google.com/file/d/1eIfFhpzxXBIHsJxLrHZW8bSoM2Fe6-zK/view?usp=sharing" title="Resume" target="_blank">Resume</a></li>
-						<li><a href="https://www.youtube.com/channel/UCV4AXpDSxschk8I0sCl8JXw" target="_blank">Youtube</a></li>
-						<li><a onclick="toContact()" title="Contact" id="contact-href">Contact</a></li>
-					</ul>
-				</div>
-			</div>
+  <div class="map-container">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <div title="Email">
+        <small>
+          <i class="far fa-envelope"></i>
+          patrickscott2013@gmail.com
+        </small>
+      </div>
 
-		</div>
-	</nav>
+      <div>
+        <a href="https://github.com/pkellz" target="_blank">
+          <small title="Follow Me On Github">
+            <i class="fab fa-github"></i>
+            Github
+          </small>
+        </a>
+      </div>
 
-	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-center">
-					<div class="display-t">
-						<div class="display-tc animate-box" id="main-patrick-scott" data-animate-effect="fadeIn">
-							<h1>Patrick Scott</h1>
-							<h2 >
-							<em>Full Stack Node.js Developer <br />
-								B.S. Computer Science -
-								University Of South Carolina</em>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+      <div>
+        <a href="https://www.youtube.com/channel/UCV4AXpDSxschk8I0sCl8JXw" target="_blank">
+          <small title="My Youtube Channel">
+            <i class="fab fa-youtube"></i>
+            Youtube
+          </small>
+        </a>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
 
-	<div id="gtco-features" >
-		<h1 id="skills">Skills</h1>
-		<div class="gtco-container" style="padding-top:5%;">
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-pencil"></i>
-						</span>
-						<h3>HTML5</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-layout"></i>
-						</span>
-						<h3>CSS3 / Sass</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-classic-computer"></i>
-						</span>
-						<h3>Javascript / jQuery / React</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-cup"></i>
-						</span>
-						<h3>Node JS</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-popup"></i>
-						</span>
-						<h3>MongoDB</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-circle-plus"></i>
-						</span>
-						<h3>Express JS</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-github"></i>
-						</span>
-						<h3>Git</h3>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-database"></i>
-						</span>
-						<h3>Java</h3>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-database"></i>
-						</span>
-						<h3>AJAX & API's</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="gtco-testimonial">
-		<div class="gtco-container" >
-			<div class="row animate-bx">
-				<h1 style="text-align:center; color:black !important;">Portfolio</h1>
-			</div>
-			<br />
-			<div class="row animate-box">
-				<div class="owl-carousel owl-carousel-fullwidth ">
-					<!--Availabook-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="https://availabook.herokuapp.com/" target="_blank">
-									<img src="images/availabook.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="https://availabook.herokuapp.com/" target="_blank">Availabook - Text Message Alerts When A Book Is Returned</a>
-								<small><em>Volunteer Web App For Thomas Cooper Library</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--ReactJS Live Editor-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="https://react-live-html-editor.herokuapp.com/" target="_blank">
-									<img src="images/editor.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="https://react-live-html-editor.herokuapp.com/" target="_blank">ReactJS Live HTML Code Editor</a>
-								<small><em>HTML Editor built with ReactJS</em></small>
-							</blockquote>
-						</div>
-					</div>
-					<!--Jobx-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="http://jobx.herokuapp.com" target="_blank">
-									<img src="images/Jobr.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="http//jobx.herokuapp.com" target="_blank">Jobx - Job Matchmaking Made Simple</a>
-								<small><em>Unfinished - Built at Colahacks 2018 - It's Tinder for Jobs</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--CryptoTicker-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./cryptoticker" target="_blank">
-									<img src="images/ticker.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./cryptoticker" target="_blank">jQuery Cryptocurrency Ticker Widget</a>
-								<small><em>Stock ticker for cryptos</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Javascript Keycode-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./keycode" target="_blank">
-									<img src="images/keycode.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./keycode" target="_blank">Javascript Keycode Visualizer</a>
-								<small><em>Enter any key > Get It's Keycode</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Beer City-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="http://beercitycrossfit.com/" target="_blank">
-									<img src="images/bccf.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="http://beercitycrossfit.com/" target="_blank">Search Engine Optimization for Beer City Crossfit</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--AngularJS Blog-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./AngularJS Blog" target="_blank">
-									<img src="images/ang2.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./AngularJS Blog" target="_blank">Static Blog - AngularJS</a>
-								<small><em>Old AngularJS 1.X Blog</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-
-					<!--Three.js Bitcoin-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./Bitcoin" target="_blank">
-									<img src="images/bitcoin.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./Bitcoin" target="_blank">3D Bitcoin Model - Three.js</a>
-								<small><em>Bitcoin model built with the Three.js library</em></small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--To Do List-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="https://quiet-shelf-57556.herokuapp.com/" target="_blank">
-									<img src="images/todo.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="https://quiet-shelf-57556.herokuapp.com/" target="_blank">ToDo List App - ReactJS</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Tic Tac Toe-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="https://mysterious-coast-77857.herokuapp.com/" target="_blank">
-									<img src="images/tictactoe.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="https://mysterious-coast-77857.herokuapp.com/" target="_blank">Tic-Tac-Toe - ReactJS</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Hielo-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./hielo" target="_blank">
-									<img src="images/hielo.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./hielo" target="_blank">Static Portfolio</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Three.js Mario Coin Block-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./Mario" target="_blank">
-									<img src="images/marioblock.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./Mario" target="_blank">3D Mario Block Model - Three.js</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Photoshop to HTML-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./psdpractice01" target="_blank">
-									<img src="images/psd-1.png" alt="user" style="height:300px; width:300px;">
-								</a>
-							</figure>
-
-							<blockquote>
-								<a href="./psdpractice01" target="_blank">Flat PSD to HTML</a>
-							</blockquote>
-						</div>
-					</div>
-
-					<!--Metro Blog-->
-					<div class="item">
-						<div class="testimony-slide active text-center">
-							<figure>
-								<a href="./Metro Blog" target="_blank">
-									<img src="images/metro.jpg" alt="user" style="height:300px; width:300px;;">
-								</a>
-							</figure>
-							<blockquote>
-								<a href="./Metro Blog" target="_blank">Metro style blog</a>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-
-
-	<!-- <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter" style="background-image:url(images/img_bg_5.png);">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="icon-clock"></i>
-								</span>
-
-								<span class="counter js-counter" data-from="0" data-to="21" data-speed="3000" data-refresh-interval="50">1</span>
-								<span class="counter-label">Years Old</span>
-
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="icon-briefcase"></i>
-								</span>
-
-								<span class="counter js-counter" data-from="0" data-to="6" data-speed="4000" data-refresh-interval="50">1</span>
-								<span class="counter-label">Years Of Coding Experience</span>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="icon-hour-glass"></i>
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="2019" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">Graduation Year</span>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="icon-classic-computer"></i>
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="7" data-speed="6000" data-refresh-interval="50">1</span>
-								<span class="counter-label">Programming / Scripting Languages</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- <div id="gtco-services">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="gtco-tabs">
-					<ul class="gtco-tab-nav">
-						<li class="active"><a href="#" data-tab="1"><span class="icon visible-xs"><i class="icon-command"></i></span><span class="hidden-xs">Education</span></a></li>
-						<li><a href="#" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">Work Experience</span></a></li>
-
-					</ul>
-
-					Tabs
-					<div class="gtco-tab-content-wrap">
-
-						<div class="gtco-tab-content tab-content active" data-tab-content="1">
-							<div class="col-md-6">
-								<div class="gtco-container">
-									<img src="images/gamecock.png" style="height:70%;width:70%;"/>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<h2><strong>University of South Carolina</strong></h2>
-								<p>I am a junior Computer Science major at the University of South Carolina.</p>
-
-								<p>I've played in the University of South Carolina Mighty Sound of the Southeast Marching Band for 2 years and
-								played in the Concocktion Basketball Pep Band for 3 years. I was a volunteer for the Gamecock Pantry, which is an organization
-							 	dedicated to poverty alleviation on campus, for three months. I know 7 programming/scripting languages and I've participated in multiple Hack-A-Thons
-							  over the past two years.</p>
-
-								<div class="row">
-									<div class="col-md-12">
-										<h2 class="uppercase">Fun Fact</h2>
-										<p>I used to have dreadlocks that went down my back!</p>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="gtco-tab-content tab-content" data-tab-content="2">
-							<div class="col-md-6 col-md-push-6">
-								<div class="gtco-container">
-									<img src="images/me2.jpg" style="height:100%;width:100%; border-radius:10px;"/>
-								</div>
-							</div>
-							<div class="col-md-6 col-md-pull-6">
-								<h2><strong>Resume</strong></h2>
-								<p>View my resume <a href="https://drive.google.com/file/d/1EcQ_9nPfpTmXRP9DLCJvXpdfI14YATbm/view" target="_blank">here</a>.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-
-	</div>
-
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box contact" id="contact">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h1>Contact Me</h1>
-					<p>Don't worry. I don't bite.</p>
-				</div>
-				<div class="col-md-8 col-md-offset-2 text-center"
-				style="margin-top:-4%;">
-				<p style="background:red;">
-					<ul class="gtco-social-icons" style="text-align:center;">
-						<li><a href="https://github.com/pkellz" target="_blank" title="Check Me Out On Github!"><i class="icon-github"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/patrick-scott-3a2b63103/" target="_blank" title="Connect With Me On LinkedIn!"><i class="icon-linkedin"></i></a></li>
-					</ul>
-				</p>
-				<h4>patrickscott2013@gmail.com</h4>
-			</div>
-			<div class="gtco-container" style="">
-				<p style="text-align:center;">
-					<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-					<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-				</p>
-			</div>
-			</div>
-		</div>
-	</div>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
-
-	</body>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMypkHcVSuysx97dSRELZiGsDk3I-H6iw&callback=initMap">
+      </script>
+</body>
 </html>
