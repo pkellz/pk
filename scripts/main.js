@@ -7,7 +7,7 @@ $(function()
 })
 function startBillboardTransition($billboard_imgs)
 {
-  const pause = 12000
+  const pause = 7000
   let i = 0
 
   setInterval(function(){
