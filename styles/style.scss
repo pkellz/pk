@@ -56,10 +56,11 @@ a
   z-index: 20;
   position: fixed;
   height:$nav-height;
-  margin:0px $nav-height;
+  // margin:0px $nav-height;
+  margin:0px;
   display: flex;
   width: 100vw;
-  background: linear-gradient(to left,$primary-color*0.3,#000);
+  background: linear-gradient(to right,$primary-color*0.3,#000);
   align-items: center;
 }
 .nav li
