@@ -109,21 +109,21 @@ function getProjects()
     },
     'Keycode' : {
       name: 'Javascript Keycode Visualizer',
-      url:'/keycode',
+      url:'keycode',
       img:'images/portfolio/keycode.png',
       desc:"Javascript keycode visualizer. Press any key, get it's keycode.",
       skills:['HTML','CSS','Javascript']
     },
     'CryptoTicker' : {
       name:'CryptoTicker',
-      url:'/cryptoticker',
+      url:'cryptoticker',
       img:'images/portfolio/crypto.png',
       desc:"jQuery CryptoTicker plugin. It's like a stock market ticker, except with cryptos. Plugin fetches data such as current coin value, market cap, and 24h percentage changes from CoinMarketCap API.",
       skills:['HTML','CSS','jQuery','CoinMarketCap API']
     },
     'Bitcoin' : {
       name:'Bitcoin',
-      url:'/bitcoin',
+      url:'bitcoin',
       img:'images/portfolio/bitcoin.png',
       desc:"Decided to start playing around with the Three.js library and I came up with this 3D model of a Bitcoin!",
       skills:['HTML','CSS','Javascript','Three.js']
