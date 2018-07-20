@@ -1,0 +1,3 @@
+[submodule "fate"]
+	path = fate
+	url = https://github.com/pkellz/fate.git
