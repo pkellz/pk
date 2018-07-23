@@ -127,6 +127,13 @@ function getProjects()
       img:'images/portfolio/bitcoin.png',
       desc:"Decided to start playing around with the Three.js library and I came up with this 3D model of a Bitcoin!",
       skills:['HTML','CSS','Javascript','Three.js']
+    },
+    'Templates' : {
+      name:'My Template Store',
+      url:'templates',
+      img:'images/portfolio/templates.png',
+      desc:"This is the storefront where I sell my HTML templates!",
+      skills:['HTML','CSS','Javascript','Paypal Buttons']
     }
   }
 }
