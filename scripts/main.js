@@ -134,6 +134,14 @@ function getProjects()
       img:'images/portfolio/templates.png',
       desc:"This is the storefront where I sell my HTML templates!",
       skills:['HTML','CSS','Javascript','Paypal Buttons']
+    },
+    'FateJS' : {
+      name:'fateJS',
+      url:'fatedocs',
+      img:'images/portfolio/fatejs.png',
+      desc:`Modeled after <a href='https://chancejs.com/' target='_blank'>Chance.js</a>, fateJS is a Javascript library that helps generate random numbers, characters,
+       booleans, etc. I built fateJS in order to build my chops in creating Javascript libraries from scratch.`,
+      skills:['Javascript','ES6','Docpress']
     }
   }
 }
