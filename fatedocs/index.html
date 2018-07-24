@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/script.js"></script>
+    <script src="fate.js" charset="utf-8"></script>
     <title>fateJS</title>
     <meta name="viewport" content="width=device-width">
   </head>
@@ -42,8 +43,12 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="fatejs">fateJS</h1>
-<p><strong>fateJS</strong> is a minimalist Javascript library for generating random strings, numbers, and truthy/falsy values.</p>
+<p>Modeled after Chance.js, <strong>fateJS</strong> is a minimalist Javascript library for generating random strings, numbers, and truthy/falsy values.</p>
 <p><strong>fateJS</strong> was created because I wanted to practice writing Javascript libraries.</p>
+<p><strong>fateJS</strong> is loaded on this page! Just open up your console and play around a little!</p>
+<p>
+  <img src="demo.png" alt="">
+</p>
 <p>Fork me on <a href="https://github.com/pkellz/fate">Github</a>.</p>
 <p>Written by <a href="https://pkellz.github.io/pk">Patrick Scott</a>.</p>
 
@@ -53,5 +58,10 @@
         </div>
       </div>
     </div>
+    <script>
+
+      const f8 = new fate()
+      if(f8) console.log("fateJS Loaded")
+    </script>
   </body>
 </html>
