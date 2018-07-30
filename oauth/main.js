@@ -1,7 +1,6 @@
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
 
 document.addEventListener("DOMContentLoaded",function(){
+
 })
 //AIzaSyBxGGRXJNIf-SXiDNbm4_Z2hwettmzgzHw
 //935775728573-k8nvr8icma7f31lds9gn48ot30eeqnk8.apps.googleusercontent.com
@@ -22,6 +21,8 @@ var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
   *  listeners.
   */
  function initClient() {
+   var authorizeButton = document.getElementById('authorize-button');
+   var signoutButton = document.getElementById('signout-button');
    gapi.client.init({
      discoveryDocs: DISCOVERY_DOCS,
      clientId: CLIENT_ID,
