@@ -51,7 +51,6 @@
 
 function fetchData(url,_this,settings)
 {
-  console.log("Fetching New Data");
   fetch(url)
   .then(res=>
   {
@@ -75,8 +74,6 @@ function fetchData(url,_this,settings)
 
 function renderData(data,_this,opts,url)
 {
-  // _this.empty();
-  console.log(_this.children("ul"));
   if(_this.children("ul").length == 0)
     _this.append("<ul>");
 
@@ -102,7 +99,7 @@ function renderData(data,_this,opts,url)
       mktCap.splice(i,0,',')
     }
     mktCap = mktCap.join('');
-
+    name = name.replace(/\s/g,"-")
     _this.children('ul').append(`
     <li>
       <div class="coin" style="border-right:${opts.separatorWidth}px solid ${opts.separatorColor}">
