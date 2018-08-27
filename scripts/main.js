@@ -90,7 +90,7 @@ function getProjects()
       name:'Availabook',
       url:'http://availabook.herokuapp.com',
       img:'images/portfolio/availabook.png',
-      desc:" Volunteer web application for the Thomas Cooper Library at the University of South Carolina. The application is named Availabook, as it allows patrons to subscribe to text message notifications when a particular book they are looking for is returned to the library. I created Availabook because I saw a need. Patrons could not get reliable notification as to when an important book that they needed was returned, so I decided to pioneer this project in order to fill the void.",
+      desc:" Volunteer web application for the Thomas Cooper Library at the University of South Carolina. The application is named Availabook, as it allows students to subscribe to text message notifications when a particular book they are looking for is returned to the library. I created Availabook because I saw a need. Students could not get reliable notification as to when an important book that they needed was returned, so I decided to pioneer this project in order to fill the void.",
       skills:['HTML','CSS','Javascript','NodeJS','Express','Nexmo API','MongoDB']
     },
     'Jobx' : {
@@ -121,13 +121,13 @@ function getProjects()
       desc:"jQuery CryptoTicker plugin. It's like a stock market ticker, except with cryptos. Plugin fetches data such as current coin value, market cap, and 24h percentage changes from CoinMarketCap API.",
       skills:['HTML','CSS','jQuery','CoinMarketCap API']
     },
-    'Bitcoin' : {
-      name:'Bitcoin',
-      url:'bitcoin',
-      img:'images/portfolio/bitcoin.png',
-      desc:"Decided to start playing around with the Three.js library and I came up with this 3D model of a Bitcoin!",
-      skills:['HTML','CSS','Javascript','Three.js']
-    },
+    // 'Bitcoin' : {
+    //   name:'Bitcoin',
+    //   url:'bitcoin',
+    //   img:'images/portfolio/bitcoin.png',
+    //   desc:"Decided to start playing around with the Three.js library and I came up with this 3D model of a Bitcoin!",
+    //   skills:['HTML','CSS','Javascript','Three.js']
+    // },
     'Templates' : {
       name:'My Template Store',
       url:'templates',

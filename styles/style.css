@@ -122,8 +122,8 @@ a {
   .talents .left {
     color: #eee;
     float: left;
-    position: relative;
     padding-left: 3em;
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -444,3 +444,19 @@ button:hover {
 button:active {
   color: #000000;
   background-color: rgba(0, 255, 255, 0.75); }
+
+@media screen and (max-width: 720px) {
+  .billboard .text-container h1 {
+    font-size: 3em; }
+  .nav {
+    height: 63px; }
+  .talents .right {
+    display: none; }
+  .talents .left {
+    background: red; } }
+
+@media screen and (max-width: 580px) {
+  .billboard .text-container h1 {
+    font-size: 2em; }
+  .billboard .text-container h4 {
+    font-size: 16px; } }
