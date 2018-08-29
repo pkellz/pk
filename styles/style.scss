@@ -18,6 +18,7 @@ img
 }
 small
 {
+  word-wrap: break-word;
   font-size: 16px;
 }
 h1,h2,h3,h4,h5,h6,small
@@ -366,9 +367,9 @@ a
     position: absolute;
     z-index: 5;
     text-align: center;
-    div
+    & > div
     {
-      padding:0.25em;
+      padding:10px;
     }
     h2
     {
@@ -548,6 +549,7 @@ a
       grid-row:4;
     }
   }
+
 }
 @media screen and(max-width:'580px')
 {

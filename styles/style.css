@@ -12,6 +12,7 @@ img {
   width: 100%; }
 
 small {
+  word-wrap: break-word;
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6, small {
@@ -324,8 +325,8 @@ a {
     position: absolute;
     z-index: 5;
     text-align: center; }
-    .map-container .contact-container div {
-      padding: 0.25em; }
+    .map-container .contact-container > div {
+      padding: 10px; }
     .map-container .contact-container h2 {
       line-height: 1em;
       font-weight: bold;
