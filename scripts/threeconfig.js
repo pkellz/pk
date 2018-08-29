@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded",function()
 				"HTML5", "", "", 1, 1,
 				"CSS3", "", "", 1, 2,
 				"JS", "", "", 2, 3,
+        "VueJS","","",1,1,
+        "Unit Testing","","",1,1,
 				"SASS", "", "", 2, 2,
 				"NodeJS", "", "", 13, 2,
 				"Express", "", "", 14, 2,
