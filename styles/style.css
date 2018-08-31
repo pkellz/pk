@@ -161,6 +161,8 @@ a {
       font-weight: bold; }
     .talents .left > div p {
       font-size: 18px; }
+    .talents .left > div img {
+      width: 50px; }
     .talents .left > div .orange {
       color: #ff4512;
       font-style: italic; }

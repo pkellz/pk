@@ -58,22 +58,19 @@ img {
     height: 100%; }
 
 .sidebar {
-  width: 25vw;
-  height: 100vh;
+  width: 30vw;
+  height: 100%;
   background: #eee;
   float: left; }
 
 .sidebar-main {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   height: 20%;
@@ -82,7 +79,6 @@ img {
   background: -webkit-linear-gradient(left, #444, #111);
   background: -o-linear-gradient(left, #444, #111);
   background: linear-gradient(0.25turn, #444, #111);
-  overflow: auto;
   text-align: center;
   color: #eee;
   border-bottom: 5px solid #ff6098; }
@@ -94,7 +90,9 @@ img {
   .sidebar-bottom form {
     width: 100%; }
     .sidebar-bottom form input {
-      width: 90%; }
+      width: 80%; }
+    .sidebar-bottom form select {
+      width: 80%; }
   .sidebar-bottom p {
     font-size: 14px;
     line-height: 1.7em; }
@@ -102,12 +100,11 @@ img {
 .paypal-container {
   height: 100px;
   width: 100%;
-  overflow: hidden;
   text-align: center; }
 
 .main-container {
   overflow: auto;
-  width: 74vw;
+  width: 70vw;
   height: 100vh;
   float: right; }
 
@@ -116,7 +113,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
-  grid-auto-rows: minmax(auto, 300px); }
+  height: 100%; }
 
 .grid-container > div {
   border: 10px solid #222;
@@ -140,16 +137,13 @@ img {
   background: #222;
   overflow: auto;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding-left: 1em; }
   .bottom p {
-    -webkit-align-self: end;
     -ms-flex-item-align: end;
     align-self: end; }
 
@@ -173,3 +167,29 @@ img {
     margin-right: 20px; }
   100% {
     margin-right: 0px; } }
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); }
+  .sidebar p, .sidebar form {
+    font-size: 12px; } }
+
+@media screen and (max-width: 800px) {
+  .sidebar h2 {
+    font-size: 20px; } }
+
+@media screen and (max-width: 550px) {
+  .sidebar {
+    height: 100vh; }
+  .sidebar h2 {
+    font-size: 14px; }
+  .sidebar-bottom {
+    padding: 10px; }
+  .sidebar-bottom p {
+    display: none; }
+  .grid-container {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 450px) {
+  .grid-container i {
+    display: none; } }
