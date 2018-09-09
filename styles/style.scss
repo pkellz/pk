@@ -359,15 +359,18 @@ a
 .map-container
 {
   align-items: center;
+  // justify-content: center;
   display: flex;
   .contact-container
   {
     align-items: center;
-    border:1px solid #333;
+    border:{
+      top:1px solid #333;
+      right:1px solid #333;
+      bottom:1px solid #333;
+    }
     box-shadow: 2px 2px 10px #000;
-    border-radius:10px;
     padding:1em;
-    width:30vw;
     background: rgba(25,10,5,0.8);
     position: absolute;
     z-index: 5;
@@ -387,6 +390,7 @@ a
       background: $primary-color;
       border-radius:100%;
       padding:10px;
+      font-size: 20px;
       &:hover
       {
         cursor: pointer;
