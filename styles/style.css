@@ -498,6 +498,13 @@ button:active {
     grid-template-columns: 1fr 1fr 1fr !important; } }
 
 @media screen and (max-width: 580px) {
+  .avi {
+    display: none; }
+  .nav ul {
+    margin: auto;
+    text-align: center; }
+  .nav li {
+    font-size: 12px; }
   .billboard .text-container h1 {
     font-size: 2em; }
   .billboard .text-container h4 {
