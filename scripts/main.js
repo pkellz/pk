@@ -2,7 +2,7 @@ $(function()
 {
   const domElements = domCache()
   const portfolioProjects = getProjects()
-  startBillboardTransition(domElements['$billboard_img']);
+  startBillboardTransition(domElements['$billboard_img'])
   bindEvents(portfolioProjects,domElements)
 })
 function startBillboardTransition($billboard_imgs)
@@ -31,21 +31,23 @@ function domCache()
   const $billboard_img = $('.billboard img')
   const $grid_elements = $('.grid-wrapper > div')
   const $see_more = $('.see-more')
-
+  const $fa_bars = $('.fa-bars')
   return { $more_img, $more_desc, $more_skills,$more_url, $more_container,
-           $body_overlay,$more_name, $billboard_img, $grid_elements, $see_more};
+           $body_overlay,$more_name, $billboard_img, $grid_elements, $see_more, $fa_bars};
 }
 function bindEvents(projects, dom)
 {
   let { $more_img, $more_desc, $more_skills, $more_url, $more_container,
-        $body_overlay, $more_name, $grid_elements, $see_more } = dom
+        $body_overlay, $more_name, $grid_elements, $see_more, $fa_bars } = dom
+  $fa_bars.on('click',function(){
+    $('.nav li:first-child').siblings('li').toggleClass('responsive')
+  })
   $grid_elements.on('mouseover',function()
   {
     $(this).children('.info-overlay').css({'opacity':'1'})
   }).on('mouseleave',function(){
     $(this).children('.info-overlay').css({'opacity':'0'})
   })
-
   $body_overlay.on('click',function()
   {
     $(this).css({'display':'none','opacity':'0'})

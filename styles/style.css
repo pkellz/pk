@@ -15,13 +15,13 @@ small {
   word-wrap: break-word;
   font-size: 16px; }
 
-h1, h2, h3, h4, h5, h6, small {
-  color: #eee;
-  font-weight: 400; }
-
 a {
   color: inherit;
   text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, small {
+  color: #eee;
+  font-weight: 400; }
 
 .gradient-text {
   background: -webkit-linear-gradient(#fff, #444);
@@ -354,6 +354,13 @@ a {
       .map-container .contact-container i:hover {
         cursor: pointer; }
 
+.fa-bars {
+  display: none; }
+
+.responsive {
+  padding: 10px;
+  display: block !important; }
+
 #map {
   height: 100vh;
   width: 100vw; }
@@ -446,21 +453,23 @@ button:active {
   background-color: rgba(0, 255, 255, 0.75); }
 
 @media screen and (max-width: 720px) {
-  .desc-container {
+  .desc-container, .billboard, .text-container, .talents-left {
     text-align: center; }
   .desc-container p {
     display: none; }
-  .billboard .text-container h1 {
-    font-size: 3em; }
+  .billboard .text-container {
+    margin: 0;
+    padding: 0; }
+    .billboard .text-container h1 {
+      font-size: 3em; }
   .nav, .avi {
     height: 63px; }
-  .talents .right {
+  .talents .right, #view-skills {
     display: none; }
   .talents .left {
     border: 0px;
     margin: 0;
     padding: 0;
-    text-align: center;
     width: 100%; }
   p {
     margin: 0 !important;
@@ -498,16 +507,26 @@ button:active {
     grid-template-columns: 1fr 1fr 1fr !important; } }
 
 @media screen and (max-width: 580px) {
+  .fa-bars {
+    padding-top: 10px;
+    font-size: 40px;
+    height: 63px;
+    display: inherit; }
   .avi {
     display: none; }
-  .nav ul {
-    margin: auto;
+  .nav {
+    margin: 0;
+    padding: 0;
+    display: inherit;
     text-align: center; }
-  .nav li {
-    font-size: 12px; }
-  .billboard .text-container h1 {
-    font-size: 2em; }
+  .nav li ~ li {
+    background: rgba(10, 10, 10, 0.5);
+    margin: auto;
+    width: 50%;
+    display: none; }
   .billboard .text-container h4 {
-    font-size: 16px; }
+    font-size: 20px; }
+  .billboard .text-container small {
+    font-size: 12px; }
   .skills-container {
     grid-template-columns: 1fr 1fr !important; } }

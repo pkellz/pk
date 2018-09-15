@@ -3,6 +3,7 @@
 $nav-height:90px;
 $primary-color:#D86A2A;
 $primary-text-color:#eee;
+
 body
 {
   margin:0;
@@ -21,15 +22,15 @@ small
   word-wrap: break-word;
   font-size: 16px;
 }
-h1,h2,h3,h4,h5,h6,small
-{
-  color:$primary-text-color;
-  font-weight:400;
-}
 a
 {
   color:inherit;
   text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,small
+{
+  color:$primary-text-color;
+  font-weight:400;
 }
 .gradient-text
 {
@@ -170,7 +171,6 @@ a
     }
     img
     {
-      // height:100%;
       width:50px;
     }
     .orange
@@ -335,7 +335,6 @@ a
   }
   .skills-container
   {
-    // padding:15px;
     bottom:0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -367,7 +366,6 @@ a
 .map-container
 {
   align-items: center;
-  // justify-content: center;
   display: flex;
   .contact-container
   {
@@ -405,6 +403,16 @@ a
       }
     }
   }
+}
+// Responsive helper classes
+.fa-bars
+{
+  display: none;
+}
+.responsive
+{
+  padding: 10px;
+  display: block !important;
 }
 #map
 {
@@ -489,7 +497,7 @@ a
 
 @media screen and(max-width:'720px')
 {
-  .desc-container
+  .desc-container, .billboard, .text-container, .talents-left
   {
     text-align: center;
   }
@@ -497,15 +505,20 @@ a
   {
     display: none;
   }
-  .billboard .text-container h1
+  .billboard .text-container
   {
-    font-size:3em;
+    margin:0;
+    padding: 0;
+    h1
+    {
+      font-size:3em;
+    }
   }
   .nav, .avi
   {
     height:$nav-height * 0.7;
   }
-  .talents .right
+  .talents .right, #view-skills
   {
     display: none;
   }
@@ -514,8 +527,6 @@ a
     border:0px;
     margin:0;
     padding:0;
-    text-align: center;
-    // padding: 2em auto;
     width: 100%;
   }
   p
@@ -579,30 +590,42 @@ a
   {
     grid-template-columns: 1fr 1fr 1fr !important;
   }
-
 }
+
 @media screen and(max-width:'580px')
 {
+  .fa-bars
+  {
+    padding-top:10px;
+    font-size: 40px;
+    height: $nav-height * 0.7;
+    display: inherit;
+  }
   .avi
   {
     display: none;
   }
-  .nav ul
+  .nav
   {
-    margin:auto;
+    margin: 0;
+    padding: 0;
+    display: inherit;
     text-align: center;
   }
-  .nav li
+  .nav li ~ li
   {
-    font-size:12px;
-  }
-  .billboard .text-container h1
-  {
-    font-size: 2em;
+    background: rgba(10,10,10,0.5);
+    margin: auto;
+    width:50%;
+    display: none;
   }
   .billboard .text-container h4
   {
-    font-size: 16px;
+    font-size: 20px;
+  }
+  .billboard .text-container small
+  {
+    font-size: 12px;
   }
   .skills-container
   {
