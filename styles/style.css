@@ -453,7 +453,7 @@ button:active {
   background-color: rgba(0, 255, 255, 0.75); }
 
 @media screen and (max-width: 720px) {
-  .desc-container, .billboard, .text-container, .talents-left {
+  .desc-container, .billboard, .text-container, .talents .left {
     text-align: center; }
   .desc-container p {
     display: none; }
