@@ -591,7 +591,13 @@ h1,h2,h3,h4,h5,h6,small
     grid-template-columns: 1fr 1fr 1fr !important;
   }
 }
-
+@media screen and (max-width:'680px')
+{
+  .nav li
+  {
+    font-size: 0.8em;
+  }
+}
 @media screen and(max-width:'580px')
 {
   .fa-bars
