@@ -252,7 +252,7 @@ function getMapStyles()
       "elementType": "geometry.fill",
       "stylers": [
         {
-          "color": "#2c2c2c"
+          "color": "#542911"
         }
       ]
     },
