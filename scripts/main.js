@@ -137,6 +137,13 @@ function getProjects()
       desc:`Modeled after <a href='https://chancejs.com/' target='_blank'>Chance.js</a>, fateJS is a Javascript library that helps generate random numbers, characters,
        booleans, etc. I built fateJS in order to build my chops in creating Javascript libraries from scratch.`,
       skills:['Javascript','ES6','Docpress']
+    },
+    'SWA':{
+      name:'Scott Web Agency',
+      url:'http://www.scottwebagency.com',
+      img:'images/portfolio/swa.png',
+      desc:'This is my web development agency website. I develop websites for individuals and small businesses in the Columbia, SC area.',
+      skills:['HTML5','CSS3','Javascript']
     }
   }
 }
