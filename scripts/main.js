@@ -102,12 +102,12 @@ function getProjects()
       desc:"I built Jobx at the 2018 Colahacks Hackathon. Think of it as a Tinder for jobs. Swipe right on jobs you're interested in; left on jobs that you aren't. (Not Finished!)",
       skills:['HTML','CSS','Javascript / jQuery','Express','NodeJS','MongoDB']
     },
-    'Editor' : {
-      name:'Live HTML Editor built w/ ReactJS',
-      url:'https://react-live-html-editor.herokuapp.com/',
-      img:'images/portfolio/editor.png',
-      desc:"Simple HTML editor built on ReactJS. Bootstrapped with create-react-app.",
-      skills:['HTML','CSS','Javascript', 'ReactJS']
+    'V2V' : {
+      name:'VisaToVikas Yoga Studio',
+      url:'https://visatovikasokc.herokuapp.com/',
+      img:'images/portfolio/v2v.png',
+      desc:"Website built for an Upwork client's upcoming yoga studio.",
+      skills:['HTML','CSS','Javascript', 'jQuery']
     },
     'Keycode' : {
       name: 'Javascript Keycode Visualizer',
