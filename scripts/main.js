@@ -103,10 +103,10 @@ function getProjects()
       skills:['HTML','CSS','Javascript / jQuery','Express','NodeJS','MongoDB']
     },
     'V2V' : {
-      name:'VisaToVikas Yoga Studio',
-      url:'https://visatovikasokc.herokuapp.com/',
+      name:'VisasToVikas Yoga',
+      url:'http://www.visastovikasokc.com/',
       img:'images/portfolio/v2v.png',
-      desc:"Website built for an Upwork client's upcoming yoga studio.",
+      desc:"Website built for an Upwork client.",
       skills:['HTML','CSS','Javascript', 'jQuery']
     },
     'Keycode' : {
