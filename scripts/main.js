@@ -109,13 +109,6 @@ function getProjects()
       desc:"Website built for an Upwork client.",
       skills:['HTML','CSS','Javascript', 'jQuery']
     },
-    'Keycode' : {
-      name: 'Javascript Keycode Visualizer',
-      url:'keycode',
-      img:'images/portfolio/keycode.png',
-      desc:"Javascript keycode visualizer. Press any key, get it's keycode.",
-      skills:['HTML','CSS','Javascript']
-    },
     'CryptoTicker' : {
       name:'CryptoTicker',
       url:'cryptoticker',
