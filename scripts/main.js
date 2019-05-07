@@ -116,6 +116,13 @@ function getProjects()
       desc:"jQuery CryptoTicker plugin. It's like a stock market ticker, except with cryptos. Plugin fetches data such as current coin value, market cap, and 24h percentage changes from CoinMarketCap API.",
       skills:['HTML','CSS','jQuery','CoinMarketCap API']
     },
+    'Camoflyge' : {
+      name:'Camoflyge',
+      url:'http://www.camoflyge.com',
+      img:'images/portfolio/camoflyge.png',
+      desc:"My online clothing store - Camoflyge. Find some of the freshest camouflage jackets and pants in 2019 so you can stay CamoFly.",
+      skills:['Shopify']
+    },
     'Templates' : {
       name:'My Template Store',
       url:'templates',
