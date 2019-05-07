@@ -123,7 +123,7 @@ function getProjects()
       desc:"My online clothing store - Camoflyge. Find some of the freshest camouflage jackets and pants in 2019 so you can stay CamoFly.",
       skills:['Shopify']
     },
-    'Templates' : {
+    'Templates' : { 
       name:'My Template Store',
       url:'templates',
       img:'images/portfolio/templates.png',
