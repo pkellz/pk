@@ -18,7 +18,7 @@
 			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			  crossorigin="anonymous"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
-  <title>Patrick Scott</title>
+  <title>Patrick Scott - Web Developer</title>
 </head>
 <body>
 <div class="body-overlay"></div>
@@ -28,7 +28,6 @@
     </div>
     <div class="desc-container">
       <h2 class="project-name">
-        <!-- <span class="project-name"></span> -->
       </h2>
       <a href="" target="_blank">Go To Project</a>
       <p></p>
@@ -41,28 +40,29 @@
   </div>
   <ul class="nav">
     <li><i class="fas fa-bars"></i></li>
-    <li><a href="/">Home</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
+    <li id="about">About</li>
+    <li id="portfolio">Portfolio</li>
     <li><a href="http://github.com/pkellz" target="_blank">Github</a></li>
     <li><a href="https://www.youtube.com/channel/UCV4AXpDSxschk8I0sCl8JXw" target="_blank">Youtube</a></li>
     <li><a href="https://drive.google.com/file/d/1tpw6J9v_rP1pujUGxrjK9WYQIg_WGi4E/view?usp=sharing" target="_blank">Resume</a></li>
     <li><a href="http://pscott.blog" target="_blank">Blog</a></li>
+    <li id="contact">Contact</li>
   </ul>
 
   <div class="billboard">
     <div class="overlay"></div>
     <div class="text-container">
       <h1>Patrick <strong class="gradient-text">Scott</strong></h1>
-      <h4>Web Developer - Software Engineer Intern</h4>
+      <h4>Full Stack Web Dev - Software Engineer</h4>
       <small>B.S. Computer Science - University of South Carolina, Columbia</small>
     </div>
     <img src="images/billboard/moto1.jpg" alt="">
+    <img src="images/billboard/keyboard.jpg" alt="">
     <img src="images/billboard/city.jpg" alt="">
     <img src="images/billboard/fire.jpg"  alt="">
-    <img src="images/billboard/city2.jpg"  alt="">
   </div>
 
-  <div class="talents">
+  <div class="talents about-section" id="about-section">
     <div class="left">
       <div>
         <h1><img src="images/nav2.png"/> About Me</h1>
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <div class="portfolio" id="portfolio">
+  <div class="portfolio portfolio-section" id="portfolio">
     <h4>Portfolio</h4>
     <div class="grid-wrapper">
 
@@ -127,17 +127,6 @@
           <div class="info">Scott Web Agency</div>
         </div>
 
-      <!-- CryptoTicker -->
-      <!-- <div>
-        <div class="info-overlay">
-          <div class="see-more" id="CryptoTicker" title="More Info">
-            <i class="fas fa-info-circle fa-4x"></i>
-          </div>
-        </div>
-        <img src="images/portfolio/crypto.png" alt="">
-        <div class="info">Cryptoticker</div>
-      </div> -->
-
       <!-- Camoflyge -->
       <div>
         <div class="info-overlay">
@@ -170,19 +159,15 @@
         <img src="images/portfolio/fatejs.png" alt="">
         <div class="info">fateJS</div>
       </div>
-
-
-
     </div>
   </div>
 
-  <div class="map-container">
+  <div class="map-container contact-section">
     <div class="contact-container">
       <h2>Contact Me</h2>
       <div title="Email - patrickscott2013@gmail.com">
         <small>
           <i class="far fa-envelope"></i>
-          <!-- patrickscott2013@gmail.com -->
         </small>
       </div>
 
@@ -209,6 +194,6 @@
 
   <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMypkHcVSuysx97dSRELZiGsDk3I-H6iw&callback=initMap">
-      </script>
+    </script>
 </body>
 </html>

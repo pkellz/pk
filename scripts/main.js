@@ -3,7 +3,7 @@ $(function()
   const domElements = domCache()
   const portfolioProjects = getProjects()
   startBillboardTransition(domElements['$billboard_img'])
-  bindEvents(portfolioProjects,domElements)
+  bindEvents(portfolioProjects, domElements)
 })
 function startBillboardTransition($billboard_imgs)
 {
@@ -32,13 +32,26 @@ function domCache()
   const $grid_elements = $('.grid-wrapper > div')
   const $see_more = $('.see-more')
   const $fa_bars = $('.fa-bars')
+  const $about_link = $('#about')
+  const $contact_link = $('#contact')
+  const $portfolio_link = $('#portfolio')
+
   return { $more_img, $more_desc, $more_skills,$more_url, $more_container,
-           $body_overlay,$more_name, $billboard_img, $grid_elements, $see_more, $fa_bars};
+           $body_overlay,$more_name, $billboard_img, $grid_elements, $see_more,
+          $fa_bars, $about_link, $contact_link, $portfolio_link};
 }
+
 function bindEvents(projects, dom)
 {
   let { $more_img, $more_desc, $more_skills, $more_url, $more_container,
-        $body_overlay, $more_name, $grid_elements, $see_more, $fa_bars } = dom
+        $body_overlay, $more_name, $grid_elements, $see_more, $fa_bars,
+        $about_link, $contact_link, $portfolio_link } = dom
+
+  // Navigation easy scroll
+  $about_link.on('click', easyScroll.bind(null, "about-section",50, 1000))
+  $contact_link.on('click', easyScroll.bind(null, "contact-section",50, 1000))
+  $portfolio_link.on('click', easyScroll.bind(null, "portfolio-section",50, 1000))
+
   $fa_bars.on('click',function(){
     $('.nav li:first-child').siblings('li').toggleClass('responsive')
   })
@@ -72,6 +85,11 @@ function bindEvents(projects, dom)
     })
     $more_container.css({'opacity':1,'display':'inherit'})
   })
+}
+
+function easyScroll(className, offset, duration)
+{
+  $('html, body').animate({scrollTop: $(`.${className}`).offset().top - offset}, duration);
 }
 
 function initMap() {
@@ -123,7 +141,7 @@ function getProjects()
       desc:"My online clothing store - Camoflyge. Find some of the freshest camouflage jackets and pants in 2019 so you can stay CamoFly.",
       skills:['Shopify']
     },
-    'Templates' : { 
+    'Templates' : {
       name:'My Template Store',
       url:'templates',
       img:'images/portfolio/templates.png',
