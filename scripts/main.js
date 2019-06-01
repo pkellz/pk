@@ -47,7 +47,7 @@ function bindEvents(projects, dom)
         $body_overlay, $more_name, $grid_elements, $see_more, $fa_bars,
         $about_link, $contact_link, $portfolio_link } = dom
 
-  // Navigation easy scroll
+  // Navigation easy scroll 
   $about_link.on('click', easyScroll.bind(null, "about-section",50, 1000))
   $contact_link.on('click', easyScroll.bind(null, "contact-section",50, 1000))
   $portfolio_link.on('click', easyScroll.bind(null, "portfolio-section",50, 1000))
