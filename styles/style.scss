@@ -56,6 +56,12 @@ h1,h2,h3,h4,h5,h6,small
   right:0;
   position: fixed;
   z-index: 21;
+  transition: 500ms all ease;
+  &:hover
+  {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px $primary-color * 0.7;
+  }
 }
 .nav
 {
@@ -154,7 +160,6 @@ h1,h2,h3,h4,h5,h6,small
     overflow: hidden;
     float:right;
   }
-
   .left > div
   {
     padding: 3em;
@@ -179,7 +184,6 @@ h1,h2,h3,h4,h5,h6,small
       font-style: italic;
     }
   }
-
 }
 
 .portfolio
@@ -278,7 +282,6 @@ h1,h2,h3,h4,h5,h6,small
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
   .info-overlay .see-more
   {
@@ -363,44 +366,42 @@ h1,h2,h3,h4,h5,h6,small
     font-weight: bold;
   }
 }
-.map-container
+.contact-container
 {
-  align-items: center;
-  display: flex;
-  .contact-container
+  border:{
+    top:1px solid #333;
+    right:1px solid #333;
+    bottom:1px solid #333;
+  }
+  box-shadow: 2px 2px 10px #000;
+  padding:1.5em;
+  background: rgba(25,10,5,0.8);
+  z-index: 5;
+  text-align: center;
+
+  span
   {
-    align-items: center;
-    border:{
-      top:1px solid #333;
-      right:1px solid #333;
-      bottom:1px solid #333;
-    }
-    box-shadow: 2px 2px 10px #000;
-    padding:1em;
-    background: rgba(25,10,5,0.8);
-    position: absolute;
-    z-index: 5;
-    text-align: center;
-    & > div
+    position:relative;
+    color:white;
+  }
+  & > div
+  {
+    padding:5px;
+  }
+  h2
+  {
+    font-weight:bold;
+    position: relative;
+  }
+  i
+  {
+    background: $primary-color;
+    border-radius:100%;
+    padding:10px;
+    font-size: 20px;
+    &:hover
     {
-      padding:10px;
-    }
-    h2
-    {
-      line-height: 1em;
-      font-weight:bold;
-      position: relative;
-    }
-    i
-    {
-      background: $primary-color;
-      border-radius:100%;
-      padding:10px;
-      font-size: 20px;
-      &:hover
-      {
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
   }
 }
