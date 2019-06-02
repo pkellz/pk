@@ -35,22 +35,29 @@ function domCache()
   const $about_link = $('#about')
   const $contact_link = $('#contact')
   const $portfolio_link = $('#portfolio')
+  const $side_tab = $('#side-tab')
+  const $side_tab_container = $('#side-container')
 
   return { $more_img, $more_desc, $more_skills,$more_url, $more_container,
            $body_overlay,$more_name, $billboard_img, $grid_elements, $see_more,
-          $fa_bars, $about_link, $contact_link, $portfolio_link};
+          $fa_bars, $about_link, $contact_link, $portfolio_link, $side_tab, $side_tab, $side_tab_container};
 }
 
 function bindEvents(projects, dom)
 {
   let { $more_img, $more_desc, $more_skills, $more_url, $more_container,
         $body_overlay, $more_name, $grid_elements, $see_more, $fa_bars,
-        $about_link, $contact_link, $portfolio_link } = dom
+        $about_link, $contact_link, $portfolio_link, $side_tab, $side_tab_container } = dom
+
+  $side_tab.on('click', function(){
+    $side_tab_container.toggleClass('closed-tab')
+  })
 
   // Navigation easy scroll
   $about_link.on('click', easyScroll.bind(null, "about-section",50, 1000))
   $contact_link.on('click', easyScroll.bind(null, "contact-section", -window.innerHeight, 1000))
   $portfolio_link.on('click', easyScroll.bind(null, "portfolio-section",50, 1000))
+
 
   $fa_bars.on('click',function(){
     $('.nav li:first-child').siblings('li').toggleClass('responsive')
