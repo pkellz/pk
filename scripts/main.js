@@ -5,6 +5,7 @@ $(function()
   startBillboardTransition(domElements['$billboard_img'])
   bindEvents(portfolioProjects, domElements)
 })
+
 function startBillboardTransition($billboard_imgs)
 {
   const pause = 7000
