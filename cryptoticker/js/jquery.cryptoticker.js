@@ -8,14 +8,19 @@
 
 (function($)
 {
-  $.fn.cryptoticker = function(options)
+  $.fn.cryptoticker = function(options = {})
   {
-    let settings = {
-      id:null,                    // search by id ("bitcoin" for example) - can only return one coin at a time
-      getTopCoins:null,           // return n coins - overrides 'top5' and 'top10' but not 'id'- default 10 coins
-      startIndex:0,               // default startIndex is 0, most likely 'bitcoin'
+    const apiURL = 'http://cryptoticker-back.herokuapp.com/'
+
+    let requestDefaults = {
+      id:'',                    // search by id ("bitcoin" for example) - can only return one coin at a time
+      getTopCoins:10,             // return n coins - overrides 'top5' and 'top10' but not 'id'- default 10 coins
+      startIndex:1,               // default startIndex is 0, most likely 'bitcoin'
       top5:false,                 // returns top 5 coins by market cap - will not set if any of the above is already set
       top10:false,                // returns top 10 coins by market cap - will not set if any of the above is already set
+    }
+
+    let styleDefaults = {
       speed:10000,                // time until slide ends - default 30 seconds
       fadeInOutSpeed:2500,        // time it takes to fade out after slide animation ends - default 2.5 seconds,
       resetSpeed:1000,            // time it takes for the ticker to reset position after fading out - default 1 second
@@ -26,42 +31,37 @@
       capColor:'#ffffff',         // default market cap color
     }
 
-    $.extend(settings, options);
+    extendOverwriteOnly(styleDefaults, options)
+    extendOverwriteOnly(requestDefaults, options)
 
-    const api = 'https://api.coinmarketcap.com/v1/ticker/'
-    let endpoint;
+    requestDefaults.limit = requestDefaults.getTopCoins
+    if(requestDefaults.top5)
+      requestDefaults.limit = 5
+    else if(requestDefaults.top10)
+      requestDefaults.limit = 10
 
-    //Remember 'id' needs a '/' but ?limit=n does not
-    if(settings.id)
-      endpoint = `${settings.id.toLowerCase()}/`
-    else if(settings.getTopCoins)
-      endpoint = `?start=${settings.startIndex}&limit=${settings.getTopCoins}`;
-    else if(settings.top5)
-      endpoint = `?start=${settings.startIndex}&limit=5`
-    else if(settings.top10)
-      endpoint = `?start=${settings.startIndex}&limit=10`
-    else
-      endpoint = `?start=${settings.startIndex}&limit=10` //default query if no matching options are provided
-
-    let url = api+endpoint
-    fetchData(url,this,settings)
+    fetchData(apiURL, this, requestDefaults, styleDefaults)
   }
 })(jQuery)
 
-function fetchData(url,_this,settings)
+function fetchData(apiURL, _this, requestOptions, styleOptions)
 {
-  fetch(url)
-  .then(res=>
-  {
-    if(res.status !== 200)
-      throw new err
-    return res.json()
+  fetch(apiURL, {
+    method: 'POST',
+    body: JSON.stringify(requestOptions),
+    headers: {
+      'Content-Type': 'application/json'
+    }
   })
-  .then(data=>{ renderData(data,_this,settings,url) })
+  .then(res=> res.json())
+  .then(data=>{
+    console.log(data);
+    renderData(data,_this, requestOptions, styleOptions, apiURL)
+   })
   .catch(err=>{ console.log(err) })
 }
 
-function renderData(data,_this,opts,url)
+function renderData(data,_this, reqOpts, opts, url)
 {
   // Clear previous ul
   _this.empty()
@@ -69,21 +69,22 @@ function renderData(data,_this,opts,url)
 
   data.forEach((data, index)=>
   {
-    let { name,
+    let {
           percent_change_24h: pct_24,
-          market_cap_usd:mktCap,
-          price_usd: price,
-          symbol
-        } = data
+          market_cap:mktCap,
+          price
+        } = data.quote.USD
+    let { name, symbol } = data
+
+    pct_24 = pct_24.toString()
+    mktCap = mktCap.toString()
 
     // pctChangeSign - is 24% change positive or negative
     const pctChangeSign = pct_24.split('')[0] == '-' ? 'pct_down' : 'pct_up'
     const arrow = pctChangeSign == 'pct_down' ? 'fa-caret-down' : 'fa-caret-up'
-
     // Replace all spaces in coin name with dashes
     name = name.replace(/\s/g,"-")
-    // Add commas to market cap
-    mktCap = addCommas(mktCap)
+    mktCap = addCommasToMarketCap(mktCap)
 
     _this.children('ul').append(`
     <li>
@@ -108,10 +109,10 @@ function renderData(data,_this,opts,url)
     let newestLiWidth = _this.find("li:last-child").css('width')
     _this.children("ul").css({'width':'+='+newestLiWidth});
   })
-  beginSliding(_this,opts,url)
+  beginSliding(_this,reqOpts, opts,url)
 }
 
-function beginSliding(_this,opts,url)
+function beginSliding(_this, reqOpts, opts,url)
 {
   let { speed, fadeInOutSpeed, resetSpeed } = opts;
   let ul = _this.find("ul")
@@ -121,20 +122,25 @@ function beginSliding(_this,opts,url)
   ul.animate({'margin-left':`-=${ulWidth}`},speed, ()=> {
     ul.animate({'opacity':'0'},fadeInOutSpeed,()=> {
       ul.animate({'margin-left':`0px`},fadeInOutSpeed,()=> {
-        fetchData(url,_this,opts);
+        beginSliding(_this,reqOpts, opts,url)
       })
     });
   })
 }
 
-function addCommas(mktCap)
+function extendOverwriteOnly(target, source)
+{
+  Object.keys(target).map(key => {
+    if(source.hasOwnProperty(key))
+       target[key]=source[key]
+  })
+  return source
+}
+
+function addCommasToMarketCap(mktCap)
 {
   mktCap = mktCap.split('.')[0].split('')
-  // Add commas
   for(let i = mktCap.length-3; i > 0; i-=3)
-  {
     mktCap.splice(i,0,',')
-  }
-  mktCap = mktCap.join('');
-  return mktCap
+  return mktCap.join('')
 }
