@@ -138,7 +138,7 @@ function getProjects()
     'CryptoTicker' : {
       name:'CryptoTicker',
       url:'cryptoticker',
-      img:'images/portfolio/crypto.png',
+      img:'images/portfolio/cryptoticker.png',
       desc:"jQuery CryptoTicker plugin. It's like a stock market ticker, except with cryptos. Plugin fetches data such as current coin value, market cap, and 24h percentage changes from CoinMarketCap API.",
       skills:['HTML','CSS','jQuery','CoinMarketCap API']
     },

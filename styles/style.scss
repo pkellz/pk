@@ -289,6 +289,11 @@ h1,h2,h3,h4,h5,h6,small
     grid-row:4;
     grid-column:3/5;
   }
+  // & > div:nth-child(7)
+  // {
+  //   grid-row:4;
+  //   grid-column:3/5;
+  // }
   .info
   {
     position: absolute;
