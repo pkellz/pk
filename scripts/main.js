@@ -128,6 +128,13 @@ function getProjects()
       desc:"I built Jobx at the 2018 Colahacks Hackathon. Think of it as a Tinder for jobs. Swipe right on jobs you're interested in; left on jobs that you aren't. (Not Finished!)",
       skills:['HTML','CSS','Javascript / jQuery','Express','NodeJS','MongoDB']
     },
+    'Everest' : {
+      name:'Everest',
+      url:'http://everestjs.com',
+      img:'images/portfolio/everest.png',
+      desc:"Everest is a live-trading cryptocurrency bot on the Poloniex exchange.",
+      skills:['Javascript']
+    },
     'V2V' : {
       name:'VisasToVikas Yoga',
       url:'http://www.visastovikasokc.com/',
