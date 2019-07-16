@@ -133,7 +133,7 @@ function getProjects()
       url:'http://everestjs.com',
       img:'images/portfolio/everest.png',
       desc:"Everest is a live-trading cryptocurrency bot on the Poloniex exchange.",
-      skills:['Javascript']
+      skills:['Javascript'] 
     },
     'V2V' : {
       name:'VisasToVikas Yoga',
