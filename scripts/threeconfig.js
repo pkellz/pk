@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",function()
 				"Heroku", "", "", 17, 2,
 				"Microsoft Azure", "", "", 18, 2,
 				"jQuery", "", "", 1, 3,
-				".NET", "", "", 2, 3,
+				"MVC .NET", "", "", 2, 3,
 				"Bootstrap", "", "", 13, 3,
 				"Java", "", "", 14, 3,
 			];
