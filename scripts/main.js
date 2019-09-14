@@ -135,6 +135,13 @@ function getProjects()
       desc:"Everest is a live-trading cryptocurrency bot for the Poloniex exchange.",
       skills:['Javascript']
     },
+    'Carolina Posting' : {
+      name:'Carolina Posting',
+      url:'http://carolinaposting.com',
+      img:'images/portfolio/carolinaposting.png',
+      desc:"Carolina Posting is a South Carolina-based delinquent tax posting company. I built the Carolina Posting website and built software  that enables them to upload .csv files of delinquent tax payers. The software then generates tax notice PDFs that are ready-to-print.",
+      skills:['HTML', 'CSS', 'Javascript', 'Node', 'Express']
+    },
     'V2V' : {
       name:'VisasToVikas Yoga',
       url:'http://www.visastovikasokc.com/',
